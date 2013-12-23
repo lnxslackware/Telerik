@@ -45,7 +45,7 @@ class PrintMatrixes
         {
             if (direction == "down")
             {
-                if (currentRow == n -1)//If we are on the last row we change the direction and the column
+                if (currentRow == n - 1)//If we are on the last row we change the direction and the column
                 {
 
                     direction = "up";
@@ -103,13 +103,59 @@ class PrintMatrixes
         currentCol = 0;
         direction = "up";
         matrix[currentRow, currentCol] = number;
+        number++;
 
-        while (number <= 16)
+        while (number <= n * n)
         {
             if (direction == "up")
             {
+                while (matrix[currentRow, currentCol] > 0 && currentRow > 0)
+                {
+                    currentRow--;
+                }
+                if (matrix[currentRow, currentCol] > 0)
+                {
+                    while (matrix[currentRow, currentCol] > 0)
+                    {
+                        currentCol++;   
+                    }
+                }
+                if (matrix[currentRow, currentCol] == 0)
+                {
+                    direction = "down";
+                }
             }
+            if (direction == "down")
+            {
+                matrix[currentRow, currentCol] = number;
+                if (currentRow < n - 1 && currentCol < n - 1)
+                {
+                    currentRow++;
+                    currentCol++;
+                }
+                else
+                {
+                    while (currentCol > 0)
+                    {
+                        currentCol--;
+                    }
+                    direction = "up";
+                }
+            }
+            number++;
         }
-        
+
+        //Print the matrix
+        Console.WriteLine();
+        Console.WriteLine("Matrix \"C\"");
+        for (int row = 0; row < matrix.GetLength(0); row++)
+        {
+            for (int col = 0; col < matrix.GetLength(1); col++)
+            {
+                Console.Write("{0, 2} ", matrix[row, col]);
+            }
+            Console.WriteLine();
+        }
+
     }
 }
