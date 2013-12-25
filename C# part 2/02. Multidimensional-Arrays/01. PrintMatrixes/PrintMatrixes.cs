@@ -117,7 +117,7 @@ class PrintMatrixes
                 {
                     while (matrix[currentRow, currentCol] > 0)
                     {
-                        currentCol++;   
+                        currentCol++;
                     }
                 }
                 if (matrix[currentRow, currentCol] == 0)
@@ -157,5 +157,133 @@ class PrintMatrixes
             Console.WriteLine();
         }
 
+
+        //Matrix "D"
+        //Reset all values to 0
+        for (int row = 0; row < matrix.GetLength(0); row++)
+        {
+            for (int col = 0; col < matrix.GetLength(1); col++)
+            {
+                matrix[row, col] = 0;
+            }
+        }
+
+        //declaring some variables we will need
+        number = 0;
+        currentRow = 0;
+        currentCol = 0;
+        direction = "down";
+
+        while (number < n * n)
+        {
+            while (direction == "down")
+            {
+                if (matrix[currentRow, currentCol] == 0)
+                {
+                    number++;
+                    matrix[currentRow, currentCol] = number;
+                    if (currentRow < n - 1)
+                    {
+                        currentRow++;
+                    }
+                    else
+                    {
+                        currentCol++;
+                        direction = "right";
+                    }
+                }
+                else
+                {
+                    currentRow--;
+                    currentCol++;
+                    direction = "right";
+                }
+            }
+
+            while (direction == "right")
+            {
+                if (matrix[currentRow, currentCol] == 0)
+                {
+                    number++;
+                    matrix[currentRow, currentCol] = number;
+                    if (currentCol < n - 1)
+                    {
+                        currentCol++;
+                    }
+                    else
+                    {
+                        currentRow--;
+                        direction = "up";
+                    }
+                }
+                else
+                {
+                    currentCol--;
+                    currentRow--;
+                    direction = "up";
+                }
+            }
+
+            while (direction == "up")
+            {
+                if (matrix[currentRow, currentCol] == 0)
+                {
+                    number++;
+                    matrix[currentRow, currentCol] = number;
+                    if (currentRow > 0)
+                    {
+                        currentRow--;
+                    }
+                    else
+                    {
+                        currentCol--;
+                        direction = "left";
+                    }
+                }
+                else
+                {
+                    currentRow++;
+                    currentCol--;
+                    direction = "left";
+                }
+            }
+
+            while (direction == "left")
+            {
+                if (matrix[currentRow, currentCol] == 0)
+                {
+                    number++;
+                    matrix[currentRow, currentCol] = number;
+                    if (currentCol > 0)
+                    {
+                        currentCol--;
+                    }
+                    else
+                    {
+                        currentRow++;
+                        direction = "down";
+                    }
+                }
+                else
+                {
+                    currentCol++;
+                    currentRow++;
+                    direction = "down";
+                }
+            }
+        }
+
+
+        //Print the matrix
+        Console.WriteLine();
+        Console.WriteLine("Matrix \"D\"");
+        for (int row = 0; row < matrix.GetLength(0); row++)
+        {
+            for (int col = 0; col < matrix.GetLength(1); col++)
+            {
+                Console.Write("{0, 2} ", matrix[row, col]);
+            }
+            Console.WriteLine();
+        }
     }
 }
