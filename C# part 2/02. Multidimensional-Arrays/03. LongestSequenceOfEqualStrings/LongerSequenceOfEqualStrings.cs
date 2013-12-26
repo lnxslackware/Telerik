@@ -112,9 +112,10 @@ class LongerSequenceOfEqualStrings
                     {
                         if (matrix[row + i, col - i] == previousElement)
                         {
-                            leftDiagonalCount++;
+                            
                             if (leftDiagonalCount > maxSequenceCount)
                             {
+                                leftDiagonalCount++;
                                 maxSequenceCount = leftDiagonalCount;
                                 firstElementCol = col;
                                 firstElementRow = row;
@@ -125,7 +126,7 @@ class LongerSequenceOfEqualStrings
                     }
                 }
                 horizontalCount = 1;
-                leftDiagonalCount = 1;
+                rightDiagonalCount = 1;
                 verticalCount = 1;
                 leftDiagonalCount = 1;
             }
@@ -133,38 +134,45 @@ class LongerSequenceOfEqualStrings
 
         //Output
         Console.WriteLine(new string('-', 20));
-        Console.WriteLine("Maximal sequence's elements count: {0}", maxSequenceCount);
-        Console.WriteLine("First member: matrix[{0}, {1}]", firstElementRow, firstElementCol);
-        Console.Write("Elements -> ");
-        switch (maxSequenceDirection)
+        if (maxSequenceCount > 1)
         {
-            case "horizontal":
-                for (int i = firstElementCol; i < firstElementCol + maxSequenceCount; i++)
-                {
-                    Console.Write("{0} ", matrix[firstElementRow, i]);
-                }
-                break;
-            case "vertical":
-                for (int i = firstElementRow; i < firstElementRow + maxSequenceCount; i++)
-                {
-                    Console.Write("{0} ", matrix[i, firstElementCol]);
-                }
-                break;
-            case "left_diagonal":
-                for (int i = 0; i < maxSequenceCount; i++)
-                {
-                    Console.Write("{0} ", matrix[firstElementRow + i, firstElementCol - i]);
-                }
-                break;
-            case "right_diagonal":
-                for (int i = 0; i < maxSequenceCount; i++)
-                {
-                    Console.Write("{0} ", matrix[firstElementRow + i, firstElementCol + i]);
-                }
-                break;
-            default:
-                Console.WriteLine("Unexpected error");
-                break;
+            Console.WriteLine("Maximal sequence's elements count: {0}", maxSequenceCount);
+            Console.WriteLine("First member: matrix[{0}, {1}]", firstElementRow, firstElementCol);
+            Console.Write("Elements -> ");
+            switch (maxSequenceDirection)
+            {
+                case "horizontal":
+                    for (int i = firstElementCol; i < firstElementCol + maxSequenceCount; i++)
+                    {
+                        Console.Write("{0} ", matrix[firstElementRow, i]);
+                    }
+                    break;
+                case "vertical":
+                    for (int i = firstElementRow; i < firstElementRow + maxSequenceCount; i++)
+                    {
+                        Console.Write("{0} ", matrix[i, firstElementCol]);
+                    }
+                    break;
+                case "left_diagonal":
+                    for (int i = 0; i < maxSequenceCount; i++)
+                    {
+                        Console.Write("{0} ", matrix[firstElementRow + i, firstElementCol - i]);
+                    }
+                    break;
+                case "right_diagonal":
+                    for (int i = 0; i < maxSequenceCount; i++)
+                    {
+                        Console.Write("{0} ", matrix[firstElementRow + i, firstElementCol + i]);
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Unexpected error");
+                    break;
+            }
+        }
+        else
+        {
+            Console.WriteLine("There is NONE sequences of equal strings in the matrix!");
         }
         Console.WriteLine();
         Console.WriteLine(new string('-', 20));
