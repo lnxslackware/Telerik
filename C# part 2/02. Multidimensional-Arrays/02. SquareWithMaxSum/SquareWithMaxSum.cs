@@ -18,12 +18,12 @@ class SquareWithMaxSum
 
         //Reading the matrix from the console
         Console.WriteLine("Enter elements(separated with spaces): ");
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < matrix.GetLength(0); i++)
         {
             Console.Write("Row {0}: ", i);
             string userInput = Console.ReadLine();
             string[] userInputAsArray = userInput.Split(' ');
-            for (int j = 0; j < m; j++)
+            for (int j = 0; j < matrix.GetLength(1); j++)
             {
                 matrix[i, j] = int.Parse(userInputAsArray[j]);
             }
@@ -52,9 +52,9 @@ class SquareWithMaxSum
         int currentSum = 0; //Sum of the current elements
 
         //Reading all squares with the selected size
-        for (int row = 0; row <= 6 - squareSize; row++)
+        for (int row = 0; row <= matrix.GetLength(0) - squareSize; row++)
         {
-            for (int col = 0; col <= 9 - squareSize; col++)
+            for (int col = 0; col <= matrix.GetLength(1) - squareSize; col++)
             {
                 for (int squareRows = 0; squareRows < squareSize; squareRows++)
                 {
@@ -84,7 +84,7 @@ class SquareWithMaxSum
         {
             for (int j = startingElementCol; j < startingElementCol + squareSize ; j++)
             {
-                Console.Write("{0, 2} ", matrix[i, j]);
+                Console.Write("{0, -4} ", matrix[i, j]);
             }
             Console.WriteLine();
         }

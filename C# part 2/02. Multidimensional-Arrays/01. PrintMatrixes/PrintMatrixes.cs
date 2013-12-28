@@ -29,6 +29,17 @@
 using System;
 class PrintMatrixes
 {
+    static void PrintMatrix(int[,] matrix)
+    {
+        for (int row = 0; row < matrix.GetLength(0); row++)
+        {
+            for (int col = 0; col < matrix.GetLength(1); col++)
+            {
+                Console.Write("{0, -4}", matrix[row, col]);
+            }
+            Console.WriteLine();
+        }
+    }
     static void Main()
     {
         Console.Write("Enter N: ");
@@ -50,14 +61,7 @@ class PrintMatrixes
         //Print the matrix
         Console.WriteLine();
         Console.WriteLine("Matrix \"A\"");
-        for (int row = 0; row < matrix.GetLength(0); row++)
-        {
-            for (int col = 0; col < matrix.GetLength(1); col++)
-            {
-                Console.Write("{0, 2} ", matrix[row, col]);
-            }
-            Console.WriteLine();
-        }
+        PrintMatrix(matrix);
 
         //Matrix "B"
         number = 1;
@@ -71,7 +75,6 @@ class PrintMatrixes
             {
                 if (currentRow == n - 1)//If we are on the last row we change the direction and the column
                 {
-
                     direction = "up";
                     matrix[currentRow, currentCol] = number;
                     currentCol++;
@@ -102,14 +105,7 @@ class PrintMatrixes
         //Print the matrix
         Console.WriteLine();
         Console.WriteLine("Matrix \"B\"");
-        for (int row = 0; row < matrix.GetLength(0); row++)
-        {
-            for (int col = 0; col < matrix.GetLength(1); col++)
-            {
-                Console.Write("{0, 2} ", matrix[row, col]);
-            }
-            Console.WriteLine();
-        }
+        PrintMatrix(matrix);
 
         //Matrix "C"
         //Reset all values to 0
@@ -172,14 +168,7 @@ class PrintMatrixes
         //Print the matrix
         Console.WriteLine();
         Console.WriteLine("Matrix \"C\"");
-        for (int row = 0; row < matrix.GetLength(0); row++)
-        {
-            for (int col = 0; col < matrix.GetLength(1); col++)
-            {
-                Console.Write("{0, 2} ", matrix[row, col]);
-            }
-            Console.WriteLine();
-        }
+        PrintMatrix(matrix);
 
 
         //Matrix "D"
@@ -301,13 +290,6 @@ class PrintMatrixes
         //Print the matrix
         Console.WriteLine();
         Console.WriteLine("Matrix \"D\"");
-        for (int row = 0; row < matrix.GetLength(0); row++)
-        {
-            for (int col = 0; col < matrix.GetLength(1); col++)
-            {
-                Console.Write("{0, 2} ", matrix[row, col]);
-            }
-            Console.WriteLine();
-        }
+        PrintMatrix(matrix);
     }
 }
