@@ -40,12 +40,13 @@ class ClassMatrix
 
         Console.Clear();
         Console.WriteLine("Your first matrix:");
-        Console.WriteLine(firstMatrix);
+        Console.WriteLine(firstMatrix.ToString());
         Console.WriteLine("Your second matrix:");
-        Console.WriteLine(secondMatrix);
+        Console.WriteLine(secondMatrix.ToString());
 
         Console.WriteLine(new string('-', 20));
         Console.WriteLine("Result of operations: ");
+        Console.WriteLine(new string('-', 20));
         Console.WriteLine("Adding:");
         Console.WriteLine(firstMatrix + secondMatrix);
         Console.WriteLine("Substraction:");

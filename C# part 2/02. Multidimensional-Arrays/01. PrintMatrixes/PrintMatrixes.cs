@@ -69,38 +69,55 @@ class PrintMatrixes
         int currentCol = 0;
         string direction = "down";
 
-        while (number <= n * n)
+        for (int i = 0, j = 1; i < matrix.GetLength(1) && j < matrix.GetLength(1); i += 2, j += 2)
         {
-            if (direction == "down")
+            for (int k = 0; k < matrix.GetLength(0); k++)
             {
-                if (currentRow == n - 1)//If we are on the last row we change the direction and the column
-                {
-                    direction = "up";
-                    matrix[currentRow, currentCol] = number;
-                    currentCol++;
-                }
-                else
-                {
-                    matrix[currentRow, currentCol] = number;
-                    currentRow++;
-                }
+                matrix[k, i] = number;
+                number++;
             }
-            else
+
+            for (int l = matrix.GetLength(0) - 1; l >= 0; l--)
             {
-                if (currentRow == 0)//If we are on the first row we change the direction and the column
-                {
-                    direction = "down";
-                    matrix[currentRow, currentCol] = number;
-                    currentCol++;
-                }
-                else
-                {
-                    matrix[currentRow, currentCol] = number;
-                    currentRow--;
-                }
+                matrix[l, j] = number;
+                number++;
             }
-            number++;
         }
+
+        // Solution 2
+        //
+        //while (number <= n * n)
+        //{
+        //    if (direction == "down")
+        //    {
+        //        if (currentRow == n - 1)//If we are on the last row we change the direction and the column
+        //        {
+        //            direction = "up";
+        //            matrix[currentRow, currentCol] = number;
+        //            currentCol++;
+        //        }
+        //        else
+        //        {
+        //            matrix[currentRow, currentCol] = number;
+        //            currentRow++;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        if (currentRow == 0)//If we are on the first row we change the direction and the column
+        //        {
+        //            direction = "down";
+        //            matrix[currentRow, currentCol] = number;
+        //            currentCol++;
+        //        }
+        //        else
+        //        {
+        //            matrix[currentRow, currentCol] = number;
+        //            currentRow--;
+        //        }
+        //    }
+        //    number++;
+        //}
 
         //Print the matrix
         Console.WriteLine();
@@ -108,62 +125,86 @@ class PrintMatrixes
         PrintMatrix(matrix);
 
         //Matrix "C"
-        //Reset all values to 0
-        for (int row = 0; row < matrix.GetLength(0); row++)
-        {
-            for (int col = 0; col < matrix.GetLength(1); col++)
-            {
-                matrix[row, col] = 0;
-            }
-        }
 
         //Set some variables for the new initialization
         number = 1;
         currentRow = n - 1;
         currentCol = 0;
         direction = "up";
-        matrix[currentRow, currentCol] = number;
-        number++;
+        //matrix[currentRow, currentCol] = number;
+        //number++;
 
-        while (number <= n * n)
+        for (int i = 1; i <= matrix.GetLength(0); i++)
         {
-            if (direction == "up")
+            for (int j = matrix.GetLength(0) - i, k = 0; j < matrix.GetLength(0); j++, k++)
             {
-                while (matrix[currentRow, currentCol] > 0 && currentRow > 0)
-                {
-                    currentRow--;
-                }
-                if (matrix[currentRow, currentCol] > 0)
-                {
-                    while (matrix[currentRow, currentCol] > 0)
-                    {
-                        currentCol++;
-                    }
-                }
-                if (matrix[currentRow, currentCol] == 0)
-                {
-                    direction = "down";
-                }
+                matrix[j, k] = number;
+                number++;
             }
-            if (direction == "down")
-            {
-                matrix[currentRow, currentCol] = number;
-                if (currentRow < n - 1 && currentCol < n - 1)
-                {
-                    currentRow++;
-                    currentCol++;
-                }
-                else
-                {
-                    while (currentCol > 0)
-                    {
-                        currentCol--;
-                    }
-                    direction = "up";
-                }
-            }
-            number++;
         }
+
+        for (int i = 1; i <= matrix.GetLength(0); i++)
+        {
+            for (int j = matrix.GetLength(0) - i, k = 0; j > 0; j--, k++)
+            {
+                matrix[k, matrix.GetLength(0) - j] = number;
+                number++;
+            }
+        }
+
+        //Solution 2
+        //
+        //
+        //Reset all values to 0
+        //for (int row = 0; row < matrix.GetLength(0); row++)
+        //{
+        //    for (int col = 0; col < matrix.GetLength(1); col++)
+        //    {
+        //        matrix[row, col] = 0;
+        //    }
+        //}
+        //
+        //matrix[currentRow, currentCol] = number;
+        //number++;
+        //while (number <= n * n)
+        //{
+        //    if (direction == "up")
+        //    {
+        //        while (matrix[currentRow, currentCol] > 0 && currentRow > 0)
+        //        {
+        //            currentRow--;
+        //        }
+        //        if (matrix[currentRow, currentCol] > 0)
+        //        {
+        //            while (matrix[currentRow, currentCol] > 0)
+        //            {
+        //                currentCol++;
+        //            }
+        //        }
+        //        if (matrix[currentRow, currentCol] == 0)
+        //        {
+        //            direction = "down";
+        //        }
+        //    }
+        //    if (direction == "down")
+        //    {
+        //        matrix[currentRow, currentCol] = number;
+        //        if (currentRow < n - 1 && currentCol < n - 1)
+        //        {
+        //            currentRow++;
+        //            currentCol++;
+        //        }
+        //        else
+        //        {
+        //            while (currentCol > 0)
+        //            {
+        //                currentCol--;
+        //            }
+        //            direction = "up";
+        //        }
+        //    }
+        //    number++;
+        //}
 
         //Print the matrix
         Console.WriteLine();

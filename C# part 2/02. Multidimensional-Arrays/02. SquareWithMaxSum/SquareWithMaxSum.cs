@@ -46,7 +46,7 @@ class SquareWithMaxSum
 
         Console.Write("Enter square size: ");
         int squareSize = int.Parse(Console.ReadLine());//Square with custom size works :) 
-        int maxSum = 0; //Max sum found
+        int maxSum = int.MinValue; //Max sum found
         int startingElementRow = 0; //Row of the starting element needed for the output
         int startingElementCol = 0; //Col of the starting element needed for the output
         int currentSum = 0; //Sum of the current elements
