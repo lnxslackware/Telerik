@@ -131,8 +131,7 @@ class PrintMatrixes
         currentRow = n - 1;
         currentCol = 0;
         direction = "up";
-        //matrix[currentRow, currentCol] = number;
-        //number++;
+        int number2 = (int)(((1.0f + (float)matrix.GetLength(0)) / 2.0f) * (float)matrix.GetLength(0)) + 1;
 
         for (int i = 1; i <= matrix.GetLength(0); i++)
         {
@@ -141,20 +140,29 @@ class PrintMatrixes
                 matrix[j, k] = number;
                 number++;
             }
-        }
 
-        for (int i = 1; i <= matrix.GetLength(0); i++)
-        {
+            //Either with this loop or the nested one below
             for (int j = matrix.GetLength(0) - i, k = 0; j > 0; j--, k++)
             {
-                matrix[k, matrix.GetLength(0) - j] = number;
-                number++;
+                matrix[k, matrix.GetLength(0) - j] = number2;
+                number2++;
             }
         }
 
+        //for (int i = 1; i <= matrix.GetLength(0); i++)
+        //{
+        //    for (int j = matrix.GetLength(0) - i, k = 0; j > 0; j--, k++)
+        //    {
+        //        matrix[k, matrix.GetLength(0) - j] = number;
+        //        number++;
+        //    }
+        //}
+
         //Solution 2
         //
-        //
+        //matrix[currentRow, currentCol] = number;
+        //number++;
+
         //Reset all values to 0
         //for (int row = 0; row < matrix.GetLength(0); row++)
         //{
