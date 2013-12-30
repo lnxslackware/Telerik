@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. SortStringArrayByLength
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. ClassMatrix", "06. ClassMatrix\06. ClassMatrix.csproj", "{2295170E-C51D-47CC-9857-A5D85269AB7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. LargestAreaOfEqualElements", "07. LargestAreaOfEqualElements\07. LargestAreaOfEqualElements.csproj", "{08BB1435-CB30-4841-8ECD-65042436709C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{2295170E-C51D-47CC-9857-A5D85269AB7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2295170E-C51D-47CC-9857-A5D85269AB7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2295170E-C51D-47CC-9857-A5D85269AB7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08BB1435-CB30-4841-8ECD-65042436709C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08BB1435-CB30-4841-8ECD-65042436709C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08BB1435-CB30-4841-8ECD-65042436709C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08BB1435-CB30-4841-8ECD-65042436709C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
