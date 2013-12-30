@@ -50,8 +50,12 @@ class SortStringArrayByLength
         Console.WriteLine("Your array was:");
         PrintStringArray(words);
 
-        //Calling the sort method
+        //Sorting the array
+        //Variant 1
         SortArrayByLength(words);
+
+        //Variant 2
+        Array.Sort(words, (firstWord, secondWord) => firstWord.Length.CompareTo(secondWord.Length));
         
         //Print the sorted array
         Console.WriteLine(new string('-', 20));
