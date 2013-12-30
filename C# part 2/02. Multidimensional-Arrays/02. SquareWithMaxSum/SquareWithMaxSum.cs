@@ -56,6 +56,7 @@ class SquareWithMaxSum
         {
             for (int col = 0; col <= matrix.GetLength(1) - squareSize; col++)
             {
+                //Now we iterate over all the elements of the square
                 for (int squareRows = 0; squareRows < squareSize; squareRows++)
                 {
                     for (int squareCols = 0; squareCols < squareSize; squareCols++)

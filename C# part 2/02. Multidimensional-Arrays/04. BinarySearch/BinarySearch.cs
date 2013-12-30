@@ -30,8 +30,8 @@ class BinarySearch
         //Getting the result
         int resultIndex = Array.BinarySearch(numbers, k);
 
-        //Finding element equal or nearest not grater than K
-
+        //If the result is negative number - we inverse it to positive and then substract 1 to
+        //take the previous element from the array
         if (resultIndex < 0)
         {
             resultIndex = ~resultIndex - 1;
