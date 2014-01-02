@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. ReverseDigits", "07. Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. AddBigIntegerNumbers", "08. AddBigIntegerNumbers\08. AddBigIntegerNumbers.csproj", "{B0387326-1904-4DDC-A04B-6D93DCE14E63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. MaxElementInArrayPortion", "09. MaxElementInArrayPortion\09. MaxElementInArrayPortion.csproj", "{79F1F7A0-F99D-4875-8218-6AA0779309D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{B0387326-1904-4DDC-A04B-6D93DCE14E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0387326-1904-4DDC-A04B-6D93DCE14E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0387326-1904-4DDC-A04B-6D93DCE14E63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79F1F7A0-F99D-4875-8218-6AA0779309D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79F1F7A0-F99D-4875-8218-6AA0779309D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79F1F7A0-F99D-4875-8218-6AA0779309D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79F1F7A0-F99D-4875-8218-6AA0779309D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
