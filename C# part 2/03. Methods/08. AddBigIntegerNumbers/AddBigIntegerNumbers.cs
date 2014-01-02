@@ -48,30 +48,15 @@ class AddBigIntegerNumbers
             {
                 sumOfElements = shorterNumber[i] + longerNumber[i] + sum[sum.Length - 1 - i];
 
-                if (sumOfElements > 9)
-                {
-                    sum[sum.Length - 1 - i] = sumOfElements % 10;
-                    sum[sum.Length - 2 - i] += sumOfElements / 10;
-                }
-                else
-                {
-                    sum[sum.Length - 1 - i] = sumOfElements;
-                }
             }
             else
             {
                 sumOfElements = longerNumber[i] + sum[sum.Length - 1 - i];
-                
-                if (sumOfElements > 9)
-                {
-                    sum[sum.Length - 1 - i] = sumOfElements % 10;
-                    sum[sum.Length - 2 - i] += sumOfElements / 10;
-                }
-                else
-                {
-                    sum[sum.Length - 1 - i] += longerNumber[i];
-                }
             }
+
+            sum[sum.Length - 1 - i] = sumOfElements % 10;
+            sum[sum.Length - 2 - i] = sumOfElements / 10;
+
         }
 
         return sum;
