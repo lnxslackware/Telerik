@@ -8,18 +8,13 @@ using System;
 
 class GetMaxMethod
 {
-    static int GetMax(int firstNumber, int secondNumber, int thirdNumber)
+    static int GetMax(int firstNumber, int secondNumber)
     {
         int maxNumber = firstNumber;
 
         if (maxNumber < secondNumber)
         {
             maxNumber = secondNumber;
-        }
-
-        if (maxNumber < thirdNumber)
-        {
-            maxNumber = thirdNumber;
         }
 
         return maxNumber;
@@ -34,7 +29,7 @@ class GetMaxMethod
         Console.Write("Third number: ");
         int thirdNumber = int.Parse(Console.ReadLine());
 
-        int maxNumber = GetMax(firstNumber, secondNumber, thirdNumber);
+        int maxNumber = GetMax(GetMax(firstNumber, secondNumber), thirdNumber);
 
         Console.WriteLine("The maximal number is: {0}", maxNumber);
     }

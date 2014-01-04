@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. AddBigIntegerNumbers", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. MaxElementInArrayPortion", "09. MaxElementInArrayPortion\09. MaxElementInArrayPortion.csproj", "{79F1F7A0-F99D-4875-8218-6AA0779309D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. CalculateFactorial", "10. CalculateFactorial\10. CalculateFactorial.csproj", "{917BDE84-833B-4FDB-BBF2-7937A4734F1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{79F1F7A0-F99D-4875-8218-6AA0779309D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79F1F7A0-F99D-4875-8218-6AA0779309D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79F1F7A0-F99D-4875-8218-6AA0779309D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{917BDE84-833B-4FDB-BBF2-7937A4734F1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{917BDE84-833B-4FDB-BBF2-7937A4734F1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{917BDE84-833B-4FDB-BBF2-7937A4734F1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{917BDE84-833B-4FDB-BBF2-7937A4734F1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
