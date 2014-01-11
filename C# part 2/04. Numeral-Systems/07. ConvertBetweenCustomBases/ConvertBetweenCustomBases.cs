@@ -9,6 +9,7 @@ class ConvertBetweenCustomBases
 {
     static string ConvertNumberToCustomBase(string number, int baseS, int baseD)
     {
+        number = number.ToUpper();
         string numberInBaseD = string.Empty;
         int numberInDecimal = 0;
         bool isNegativeNumber = false;

@@ -8,6 +8,7 @@ class ConvertHexToDec
 {
     static int HexToDec(string hexNumber)
     {
+        hexNumber = hexNumber.ToUpper();
         int decimalNumber = 0;
 
         for (int i = hexNumber.Length - 1, j = 0; i >= 0; i--, j++)

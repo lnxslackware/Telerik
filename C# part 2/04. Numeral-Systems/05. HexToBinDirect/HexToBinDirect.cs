@@ -8,6 +8,7 @@ class HexToBinDirect
 {
     static string HexToBin(string hexNumber)
     {
+        hexNumber = hexNumber.ToUpper();
         string binaryNumber = string.Empty;
 
         for (int i = 0; i < hexNumber.Length; i++)
