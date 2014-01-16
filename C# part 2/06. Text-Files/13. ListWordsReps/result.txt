@@ -1,0 +1,4 @@
+horse -> 5
+bar -> 2
+juice -> 2
+ask -> 0

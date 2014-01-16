@@ -1,0 +1,10 @@
+odd line 1
+even line 1
+odd line 2
+even line 2
+odd line 3
+even line 3
+odd line 4
+even line 4
+odd line 5
+even line 5
