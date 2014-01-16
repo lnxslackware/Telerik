@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. CalculateAndPrintSQRT",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. ReadNumberMethod", "02. ReadNumberMethod\02. ReadNumberMethod.csproj", "{A58DEACA-9D35-4C35-BEA2-D6270D5EF84D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. ReadAndPrintFileContent", "03. ReadAndPrintFileContent\03. ReadAndPrintFileContent.csproj", "{3962C9EA-7A55-4848-9AD7-365A004B3513}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. DownloadFileFromURL", "04. DownloadFileFromURL\04. DownloadFileFromURL.csproj", "{2239EFFD-D6FD-4516-8D2D-FDBA2F29C185}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{A58DEACA-9D35-4C35-BEA2-D6270D5EF84D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A58DEACA-9D35-4C35-BEA2-D6270D5EF84D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A58DEACA-9D35-4C35-BEA2-D6270D5EF84D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3962C9EA-7A55-4848-9AD7-365A004B3513}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3962C9EA-7A55-4848-9AD7-365A004B3513}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3962C9EA-7A55-4848-9AD7-365A004B3513}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3962C9EA-7A55-4848-9AD7-365A004B3513}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2239EFFD-D6FD-4516-8D2D-FDBA2F29C185}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2239EFFD-D6FD-4516-8D2D-FDBA2F29C185}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2239EFFD-D6FD-4516-8D2D-FDBA2F29C185}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2239EFFD-D6FD-4516-8D2D-FDBA2F29C185}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
