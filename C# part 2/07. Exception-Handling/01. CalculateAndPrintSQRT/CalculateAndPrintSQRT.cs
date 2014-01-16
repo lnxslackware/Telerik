@@ -19,7 +19,7 @@ class Program
 
             if (isNumber == false)
             {
-                throw new ArgumentException();
+                throw new FormatException();
             }
 
             if (number <= 0)
@@ -39,7 +39,7 @@ class Program
         {
             Console.WriteLine("You must enter a positive number");
         }
-        catch (ArgumentException)
+        catch (FormatException)
         {
             Console.WriteLine("You have not inputed an integer number(Type Int32).");
         }
