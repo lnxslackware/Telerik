@@ -8,7 +8,7 @@ class ReverseWordsInSentence
     {
         string sentence = "C# is not C++, not PHP and not Delphi!";
         
-        List<string> sentenceWords = new List<string>(sentence.Substring(0, sentence.Length - 2).Split(' '));
+        List<string> sentenceWords = new List<string>(sentence.Substring(0, sentence.Length - 1).Split(' '));
         sentenceWords.Insert(0, sentence[sentence.Length - 1].ToString());
 
         StringBuilder builder = new StringBuilder();
