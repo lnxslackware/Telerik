@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Write a program that reads a date and time given in the format: day.month.year hour:minute:second and prints the date and time after 6 hours and 30 minutes (in the same format) along with the day of week in Bulgarian.
+ */
+
+using System;
 using System.Globalization;
 
 class DateAfter6Hours
@@ -7,15 +11,7 @@ class DateAfter6Hours
     {
         Console.WriteLine("Enter a date in format Day.Month.Year Hours:Minutes:Seconds");
         Console.Write("Date: ");
-        DateTime inputedDate = DateTime.Parse(Console.ReadLine(), new CultureInfo("bg-BG"), DateTimeStyles.AdjustToUniversal);
-        //Console.WriteLine(inputedDate);
-        //string[] inputedDateAndTime = Console.ReadLine().Split(' ');
-        //int days = int.Parse(inputedDateAndTime[0].Split('.')[0]);
-        //int months = int.Parse(inputedDateAndTime[0].Split('.')[1]);
-        //int years = int.Parse(inputedDateAndTime[0].Split('.')[2]);
-        //int hours = int.Parse(inputedDateAndTime[1].Split('.')[0]);
-        //int minutess = int.Parse(inputedDateAndTime[1].Split('.')[1]);
-        //int seconds = int.Parse(inputedDateAndTime[1].Split('.')[2]);
+        DateTime inputedDate = DateTime.Parse(Console.ReadLine(), new CultureInfo("bg-BG"), DateTimeStyles.None);
 
         DateTime newDate = inputedDate.AddHours(6);
         newDate = newDate.AddMinutes(30);
