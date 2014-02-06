@@ -13,6 +13,8 @@ namespace MobilePhone.Library
         private List<Call> callHistory = new List<Call>();
         private Battery battery;
         private Display display;
+        
+        //static field holding the information for iPhone 4S
         private static GSM iPhone4S = new GSM("iPhone", "4S", 1300, "LnX", new Battery("53GAK3", BatteryType.LiIon), new Display(3.5, 16));
 
         public GSM(string manufacturer, string model)
@@ -119,7 +121,7 @@ namespace MobilePhone.Library
             }
         }
 
-        public void AddCall(uint calledNumber, uint duration)
+        public void AddCall(string calledNumber, uint duration)
         {
             List<Call> currentCalls = CallHistory;
             currentCalls.Add(new Call(calledNumber, duration));
@@ -143,6 +145,7 @@ namespace MobilePhone.Library
                 Console.WriteLine("Phone number: {0}", call.DialedPhoneNumber);
                 Console.WriteLine("Duration: {0}", call.Duration);
                 Console.WriteLine(new string('-', 20));
+                counter++;
             }
         }
 
@@ -151,9 +154,10 @@ namespace MobilePhone.Library
             CallHistory = new List<Call>();
         }
 
-        public decimal CalculateTotalCallPrice(decimal callPrice)
+        public decimal CalculateTotalCallPrice(double price)
         {
             long totalMinutes = 0;
+            decimal callPrice = (decimal)price;
 
             foreach (var call in CallHistory)
             {
@@ -163,6 +167,7 @@ namespace MobilePhone.Library
             int reminder = (int)(totalMinutes % 60);
             totalMinutes = totalMinutes / 60;
 
+            //if there is a reminder we add 1 minute to the total used minutes (M-tel style)
             if (reminder > 0)
             {
                 totalMinutes++;

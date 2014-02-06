@@ -6,10 +6,10 @@ namespace MobilePhone.Library
     {
         private DateTime date;
         private TimeSpan time;
-        private uint dialedPhoneNumber;
+        private string dialedPhoneNumber;
         private uint duration;
 
-        public Call(uint dialedNumber, uint duration)
+        public Call(string dialedNumber, uint duration)
         {
             this.date = DateTime.Now.Date;
             this.time = DateTime.Now.TimeOfDay;
@@ -33,7 +33,7 @@ namespace MobilePhone.Library
             }
         }
 
-        public uint DialedPhoneNumber
+        public string DialedPhoneNumber
         {
             get
             {
