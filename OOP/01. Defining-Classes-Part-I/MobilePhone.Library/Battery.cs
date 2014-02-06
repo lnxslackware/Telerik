@@ -9,7 +9,8 @@ namespace MobilePhone.Library
         private int? hoursTalk;
         private BatteryType type;
 
-        public Battery(string model) : this(model, BatteryType.LiIon, null, null)
+        public Battery(string model)
+            : this(model, BatteryType.LiIon, null, null)
         {
 
         }
@@ -31,14 +32,12 @@ namespace MobilePhone.Library
 
             set
             {
-                if (value != string.Empty)
-                {
-                    this.model = value;
-                }
-                else
+                if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentNullException();
                 }
+
+                this.model = value;
             }
         }
 
