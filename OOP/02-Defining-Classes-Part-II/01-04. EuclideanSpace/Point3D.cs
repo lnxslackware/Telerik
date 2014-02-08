@@ -17,7 +17,7 @@
 
         public int Z { get; set; }
 
-        public Point3D PointZero {
+        public static Point3D PointZero {
             get
             {
                 return pointZero;

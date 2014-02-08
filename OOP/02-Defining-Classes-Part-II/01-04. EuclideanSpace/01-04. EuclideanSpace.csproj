@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculateDistance.cs" />
     <Compile Include="EuclideanSpace.cs" />
+    <Compile Include="Path.cs" />
+    <Compile Include="PathStorage.cs" />
     <Compile Include="Point3D.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

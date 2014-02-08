@@ -27,10 +27,10 @@ namespace EuclideanSpace
             using (reader)
             {
                 string readedLine = reader.ReadLine();
-                string[] coordinates = readedLine.Split(new char[] {' ', ','}, StringSplitOptions.RemoveEmptyEntries);
-                
+
                 while (readedLine != null)
                 {
+                    string[] coordinates = readedLine.Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
                     result.AddPoint(new Point3D(int.Parse(coordinates[0]), int.Parse(coordinates[1]), int.Parse(coordinates[2])));
                     readedLine = reader.ReadLine();
                 }
