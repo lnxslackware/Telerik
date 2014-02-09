@@ -1,6 +1,7 @@
 ﻿namespace Generics
 {
     using System;
+    using System.Text;
 
     class Matrix<T> where T : struct, IComparable, IFormattable, IConvertible, IComparable<T>, IEquatable<T>
     {
@@ -110,6 +111,64 @@
 
             return new Matrix<T>(result);
         }
+
+        public static bool operator true(Matrix<T> matrix)
+        {
+            for (int row = 0; row < matrix.GetLength(0); row++)
+            {
+                for (int col = 0; col < matrix.GetLength(1); col++)
+                {
+                    if (matrix[row, col] != (dynamic)default(T))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        public static bool operator false(Matrix<T> matrix)
+        {
+            for (int row = 0; row < matrix.GetLength(0); row++)
+            {
+                for (int col = 0; col < matrix.GetLength(1); col++)
+                {
+                    if (matrix[row, col] != (dynamic)default(T))
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder result = new StringBuilder();
+
+            for (int row = 0; row < this.data.GetLength(0); row++)
+            {
+                for (int col = 0; col < this.data.GetLength(1); col++)
+                {
+                    result.Append(data[row, col]);
+
+                    if (col != this.data.GetLength(1) - 1)
+                    {
+                        result.Append(" ");
+                    }
+                }
+
+                if (row != this.data.GetLength(0) - 1)
+                {
+                    result.AppendLine();
+                }
+            }
+
+            return result.ToString();
+        }
+
 
     }
 }
