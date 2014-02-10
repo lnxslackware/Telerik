@@ -10,6 +10,7 @@ namespace AttributeSample
     {
         static void Main()
         {
+            SampleClass.SampleMethod();
             Type type = typeof(SampleClass);
             object[] attributes = type.GetCustomAttributes(typeof(VersionAttribute), false);
             foreach (var version in attributes)

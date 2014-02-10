@@ -1,16 +1,15 @@
 ﻿namespace AttributeSample
 {
+    using System;
+
     [Version("3.24")]
-    public class SampleClass
+    public static class SampleClass
     {
-        public int SampleProperty { get; set; }
+        public static int SampleProperty { get; set; }
 
-        public SampleClass()
+        public static void SampleMethod()
         {
-        }
-
-        public void SampleMethod()
-        {
+            Console.WriteLine("This is a sample class.");
         }
     }
 }
