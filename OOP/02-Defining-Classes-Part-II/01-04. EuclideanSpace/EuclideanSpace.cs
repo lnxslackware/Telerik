@@ -33,7 +33,6 @@
 
             //loading a path from the file Path.txt
             Path testPath2 = PathStorage.Load();
-            
         }
     }
 }

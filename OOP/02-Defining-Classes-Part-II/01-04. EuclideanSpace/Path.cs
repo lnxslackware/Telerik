@@ -4,7 +4,7 @@
 
     public class Path
     {
-        List<Point3D> path;
+        private List<Point3D> path;
 
         public List<Point3D> GetPath
         {
