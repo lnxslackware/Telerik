@@ -31,6 +31,11 @@
 
             set
             {
+                if ((row < 0 || row > data.GetLength(0)) || ((col < 0) || col > data.GetLength(1)))
+                {
+                    throw new ArgumentOutOfRangeException("The given index is not in range of the matrix.");
+                }
+
                 this.data[row, col] = value;
             }
         }
