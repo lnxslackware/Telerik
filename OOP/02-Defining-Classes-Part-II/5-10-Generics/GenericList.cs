@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Text;
 
-    class GenericList<T> where T : IComparable
+    class GenericList<T> where T : IComparable, IEquatable<T>
     {
         private T[] data;
         int marker;
