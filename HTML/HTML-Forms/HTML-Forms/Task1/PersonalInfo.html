@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Info</title>
+    <style>
+        th {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+        <table border="1" cellspacing="0" width="30%">
+            <colgroup>
+                <col style="width: 30%" />
+                <col style="width: 70%" />
+            </colgroup>
+            <tr>
+                <th>
+                    <label for="last-name">Last Name</label>
+                </th>
+                <td>
+                    <input type="text" name="last-name" id="last-name" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="first-name">First Name</label>
+                </th>
+                <td>
+                    <input type="text" name="first-name" id="first-name" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="address">Address</label>
+                </th>
+                <td>
+                    <textarea name="address" id="address"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="city">City</label>
+                </th>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" name="city" id="city" />
+                            </td>
+                            <th>
+                                <label for="state">State</label>
+                            </th>
+                            <td>
+                                <input type="text" name="state" id="state" size="4" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="zip-code">Zip/Postal Code</label></th>
+                <td>
+                    <input type="text" name="zip-code" id="zip-code" size="4" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="country">Country</label>
+                </th>
+                <td>
+                    <select name="country" id="country">
+                        <option value="bg">Bulgaria</option>
+                        <option value="us">USA</option>
+                        <option value="gb">UK</option>
+                        <option value="ru">Russia</option>
+                        <option value="other">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label>Phone (country code, area code, number)</label>
+                </th>
+                <td>
+                    (+<input type="text" name="country-area" size="3" /> ) <input type="text" name="area-code" size="2" /> - <input type="text" name="number" size="7" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="email">Email</label>
+                </th>
+                <td>
+                    <input type="email" name="email" id="email" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Birth date
+                </th>
+                <td>
+                    <label for="month">Month</label><input type="text" name="month" id="month" size="2" />
+                    <label for="date">Date</label><input type="text" name="date" id="date" size="2" />
+                    <label for="year">Year (4 digit)</label><input type="text" name="year" id="year" size="4" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="gender">Gender</label>
+                </th>
+                <td>
+                    <select name="gender" id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Starting date
+                </th>
+                <td>
+                    <input type="radio" name="starting-date" value="spr2006" id="spring-2006" /> <label for="spring-2006">Spring 2006</label>
+                    <input type="radio" name="starting-date" value="summ2006" id="summer-2006" /> <label for="summer-2006">Summer 2006</label>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="comments">Comments/Questions</label>
+                </th>
+                <td>
+                    <textarea name="comments" id="comments"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" style="background-color: lightblue">
+                    <input type="submit" name="submit" value="Submit" />
+                    <input type="reset" name="clear-form" value="Clear This Form" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
