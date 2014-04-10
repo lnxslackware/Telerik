@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Programmer calculator</title>
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="border-only" id="outter-border">
+        <div id="calc">
+            <div id="logo-and-title"><p>Calculator</p></div>
+            <div id="window-buttons"></div>
+            <div class="border-only" id="inner-border">
+                <div id="sub-menu">
+                    <a href="#"><span class="first-letter">V</span>iew</a>
+                    <a href="#"><span class="first-letter">E</span>dit</a>
+                    <a href="#"><span class="first-letter">H</span>elp</a>
+                </div>
+                <div id="display-container">
+                    <input type="text" name="display" id="display" value="8854455" />
+                </div>
+                <div id="bits-container">
+                    <ul class="bits">
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>0000</li>
+                    </ul>
+
+                    <ul class="position">
+                        <li id="63">63</li>
+                        <li id="47">47</li>
+                        <li id="32">32</li>
+                    </ul>
+
+                    <ul class="bits">
+                        <li>0000</li>
+                        <li>0000</li>
+                        <li>1000</li>
+                        <li>0111</li>
+                        <li>0001</li>
+                        <li>1011</li>
+                        <li>1011</li>
+                        <li>0111</li>
+                    </ul>
+
+                    <ul class="position">
+                        <li id="31">31</li>
+                        <li id="15">15</li>
+                        <li id="0">0</li>
+                    </ul>
+                </div>
+                <div id="types">
+                    <div id="num-system">
+                        <ul>
+                            <li>
+                                <input type="radio" name="numeric-system" id="hex" /><label for="hex">Hex</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="numeric-system" id="dec" checked /><label for="dec">Dec</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="numeric-system" id="oct" /><label for="oct">Oct</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="numeric-system" id="bin" /><label for="bin">Bin</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="number-bits">
+                        <input type="radio" name="number-bits" id="qword" checked /><label for="qword">Qword</label>
+                        <input type="radio" name="number-bits" id="dword" /><label for="dword">Dword</label>
+                        <input type="radio" name="number-bits" id="word" /><label for="word">Word</label>
+                        <input type="radio" name="number-bits" id="byte" /><label for="byte">Byte</label>
+                    </div>
+                </div>
+
+                <div id="button-container">
+                    <button class="disabled">&nbsp;</button>
+                    <button>Mod</button>
+                    <button class="disabled capital">A</button>
+                    <button class="disabled darker">MC</button>
+                    <button class="disabled darker">MR</button>
+                    <button class="disabled darker">MS</button>
+                    <button class="disabled darker">M+</button>
+                    <button class="disabled darker">M-</button>
+
+                    <button>(</button>
+                    <button>)</button>
+                    <button class="disabled capital">B</button>
+                    <button>←</button>
+                    <button>CE</button>
+                    <button>C</button>
+                    <button>±</button>
+                    <button class="disabled darker">√</button>
+
+                    <button>RoL</button>
+                    <button>RoR</button>
+                    <button class="disabled capital">C</button>
+                    <button class="capital">7</button>
+                    <button class="capital">8</button>
+                    <button class="capital">9</button>
+                    <button>/</button>
+                    <button class="disabled darker">%</button>
+
+                    <button>Or</button>
+                    <button>XoR</button>
+                    <button class="disabled capital">D</button>
+                    <button class="capital">4</button>
+                    <button class="capital">5</button>
+                    <button class="capital">6</button>
+                    <button>*</button>
+                    <button class="disabled darker">1/x</button>
+
+                    <button>Lsh</button>
+                    <button>Rsh</button>
+                    <button class="disabled capital">E</button>
+                    <button class="capital">1</button>
+                    <button class="capital">2</button>
+                    <button class="capital">3</button>
+                    <button>-</button>
+                    <button id="equal" class="capital">=</button>
+
+                    <button>Not</button>
+                    <button>And</button>
+                    <button class="disabled capital">F</button>
+                    <button id="zero" class="capital">0</button>
+                    <button class="disabled darker">.</button>
+                    <button>+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

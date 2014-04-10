@@ -1,0 +1,57 @@
+﻿body {
+    background-color: #595959;
+    font-family: sans-serif;
+}
+
+/* Name cell */
+
+td#name {
+    background-image: url(../img/tick.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 13px;
+}
+
+/* Table data */
+
+td {
+    color: #E9EBAA;
+    padding: 9px;
+}
+
+
+/* table headings(left cells) */
+
+th {
+    font-size: 1.4em;
+    color: #AAAF9E;
+    text-align: left;
+    font-weight: normal;
+}
+
+.left-cell {
+    width: 50%;
+    vertical-align: top;
+    font-style: italic;
+    color: white; /*#C5B8B1;*/
+}
+
+td.no-support {
+    color: #ff0000;
+    font-weight: bold;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+td p {
+    margin-top: -3px;
+}
+
+td.not-answered {
+    color: orange /*#ff6a00*/;
+    font-weight: bold;
+}
+
+.grey {
+    color: #AAAF9E;
+}

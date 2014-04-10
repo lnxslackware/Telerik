@@ -1,0 +1,14 @@
+﻿body div:first-child {
+    width: 80%;
+    height: 5%;
+}
+
+body div {
+    background-color: black;
+    border-radius: 80px;
+    border: 1px solid red;
+}
+
+div div:nth-child(1) {
+    width: 95%;
+}

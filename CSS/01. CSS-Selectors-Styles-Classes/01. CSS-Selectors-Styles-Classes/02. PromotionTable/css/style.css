@@ -1,0 +1,67 @@
+﻿body {
+    /*background-color: black;*/
+}
+
+table {
+    border-collapse:collapse;
+    border: 1px outset lightgray;
+    font-family: sans-serif;
+}
+
+/* Table headings */
+
+th {
+    color: #FFFFFF;
+    background-color: #6BC729;
+    border-bottom: 1px inset lightgray /*#0db606*/;
+    border-left: 2px outset lightgray /*#0db606*/;
+    padding: 2px;
+    text-align: left;
+    font-weight: normal;
+}
+
+/* Table rows colors */
+
+tr:nth-last-of-type(2n-1) {
+    background-color: #ECECD8;
+}
+
+tr:nth-last-of-type(2n) {
+    background-color: #FFFFFF;
+}
+
+/* Table data cells */
+
+td {
+    width: 25%;
+    padding-left: 10px;
+    padding-right: 20px;
+    border-left: 2px outset lightgray /*#DED7CE*/;
+    border-bottom: none;
+}
+
+/* Country cells */
+
+.country {
+    padding-left: 35px;
+}
+
+.ger {
+    background: url(../img/ger.gif) no-repeat;
+    background-position: 8px center;
+}
+
+.mex {
+    background: url(../img/icon_flag_mx.gif) no-repeat;
+    background-position: 8px center;
+}
+
+.uk {
+    background: url(../img/gbr.png) no-repeat;
+    background-position: 8px center;
+}
+
+input[type=checkbox] {
+    box-shadow:1px 1px 2px rgba(0, 0, 0, .7) inset,
+		-1px -1px 0 white inset /*2px 2px 0 black inset,2px 2px 0 rgba(251, 252, 245, 1)*/;
+}
