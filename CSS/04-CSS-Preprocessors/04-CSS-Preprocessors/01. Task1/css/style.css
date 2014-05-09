@@ -1,0 +1,152 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: white;
+  background-color: #9414f7;
+  font-size: 14px;
+}
+body a {
+  text-decoration: none;
+}
+body > header {
+  padding: 20px;
+  /* GRADIENT BACKGROUND */
+  background: #d696ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #d696ff 0, #ce8ef7 23%, #bd71f7 49%, #ad4df7 75%, #9414f7 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d696ff), color-stop(23%, #ce8ef7), color-stop(49%, #bd71f7), color-stop(75%, #ad4df7), color-stop(100%, #9414f7));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #d696ff 0, #ce8ef7 23%, #bd71f7 49%, #ad4df7 75%, #9414f7 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #d696ff 0, #ce8ef7 23%, #bd71f7 49%, #ad4df7 75%, #9414f7 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #d696ff 0, #ce8ef7 23%, #bd71f7 49%, #ad4df7 75%, #9414f7 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #d696ff 0, #ce8ef7 23%, #bd71f7 49%, #ad4df7 75%, #9414f7 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d696ff', endColorstr='#9414f7', GradientType=0);
+  /* IE6-9 */
+}
+body > header #header-container {
+  zoom: 1;
+}
+body > header #header-container:after {
+  content: "";
+  clear: both;
+  height: 0;
+  display: block;
+}
+body > header #header-container #logo-container {
+  float: left;
+}
+body > header #header-container #reg-form-container {
+  float: right;
+}
+body > header #header-container #reg-form-container input {
+  border: 1px solid lightgray;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #9414f7;
+  margin-bottom: 10px;
+  height: 20px;
+}
+body > header #header-container #reg-form-container button {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 80px;
+  height: 30px;
+  color: white;
+  background: rgba(0, 0, 0, 0);
+  border: 1px outset lightgray;
+  font-weight: bold;
+}
+body > header nav {
+  border: 2px solid black;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 20px;
+  padding: 12px;
+  width: 78%;
+}
+body > header nav ul {
+  list-style-type: none;
+}
+body > header nav ul li {
+  display: inline;
+  float: left;
+  position: relative;
+}
+body > header nav ul li:not(:first-child) {
+  margin-left: 10px;
+}
+body > header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font: 1.4em normal Arial;
+}
+body > header nav ul ul {
+  display: none;
+}
+body section {
+  padding: 20px;
+  width: 75%;
+  float: left;
+}
+body section article {
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+body section article h1 {
+  font-size: 1.4em;
+}
+body section article footer {
+  text-align: right;
+}
+body section article footer a {
+  color: rgba(255, 255, 255, 0.5);
+}
+body aside {
+  padding: 20px;
+  float: right;
+  zoom: 1;
+  width: 20%;
+}
+body aside:after {
+  content: "";
+  clear: both;
+  height: 0;
+  display: block;
+}
+body aside a {
+  opacity: 0.3;
+}
+body aside > ul {
+  list-style-type: none;
+}
+body aside > ul > li {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+body aside > ul > li h2 {
+  font-size: 1.2em;
+}
+body aside > ul > li ul {
+  list-style-type: none;
+}
+body aside > ul > li ul li {
+  border: none;
+}
+body > footer {
+  padding-bottom: 20px;
+  clear: both;
+  text-align: center;
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

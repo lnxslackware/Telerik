@@ -1,0 +1,59 @@
+﻿body, div, form, input, fieldset, legend, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
+    font-size: 16px;
+
+    #wrapper {
+        width: 960px;
+
+        form {
+            margin: 25px;
+            padding: 10px 15px;
+            width: 380px;
+            border: 1px solid black;
+            border-radius: 15px;
+
+            fieldset {
+                border: 3px solid black;
+                border-radius: 5px;
+                text-align: right;
+                padding-right: 15px;
+
+                legend {
+                    font-size: 1.3em;
+                    font-style: italic;
+                    padding: 5px 15px;
+                }
+
+                input {
+
+                    &:not([type=number]) {
+
+                        font-size: 0.8em;
+                        padding: 5px 10px 5px 20px;
+                        border-radius: 5px;
+                        border: 1px solid #008fce;
+                        margin-bottom: 1px;
+
+                        &:last-of-type {
+                            margin-bottom: 5px;
+                        }
+
+                        &:first-of-type {
+                            margin-top: 1px;
+                        }
+                    }
+
+                    &[type=number] {
+                        padding: 5px;
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

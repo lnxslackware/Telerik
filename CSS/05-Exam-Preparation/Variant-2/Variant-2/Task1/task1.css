@@ -1,0 +1,95 @@
+﻿body,
+div,
+ul,
+li,
+a,
+table,
+thead,
+tbody,
+tfoot,
+td,
+tr,
+h1,
+p,
+th {
+  padding: 0;
+  margin: 0;
+}
+body #wrapper {
+  width: 960px;
+  font-size: 18px;
+  font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+}
+body #wrapper ul {
+  border: 1px solid #000000;
+  margin-top: 50px;
+  margin-left: 50px;
+  list-style-type: none;
+  width: 400px;
+  text-align: center;
+}
+body #wrapper ul li {
+  border-bottom: 2px solid #000000;
+}
+body #wrapper ul li:last-of-type {
+  border-bottom: none;
+}
+body #wrapper ul li:hover {
+  background: none;
+  background-color: #aaaaaa;
+}
+body #wrapper ul li.current div.accordion-content {
+  display: block;
+  padding: 5px 15px;
+  text-align: left;
+  background-color: #aaaaaa;
+  color: #444444;
+}
+body #wrapper ul li a {
+  background: -webkit-linear-gradient(top, #eeeeee 0, #aaaaaa 75%);
+  /* Chrome10+,Safari5.1+ */
+  display: block;
+  text-decoration: none;
+  color: #444444;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+body #wrapper ul li div.accordion-content {
+  display: none;
+}
+body #wrapper ul li div.accordion-content h1 {
+  color: #5e5e5e;
+  text-align: center;
+  font-size: 1.6em;
+  padding: 5px 0;
+}
+body #wrapper ul li div.accordion-content p {
+  text-align: justify;
+}
+body #wrapper ul li div.accordion-content table {
+  margin: 15px 0 15px 5px;
+  border: 1px solid #000000;
+  border-collapse: collapse;
+  text-align: center;
+}
+body #wrapper ul li div.accordion-content table tr:nth-of-type(2n+1) {
+  background: -webkit-linear-gradient(#cbcbcb, #898989);
+}
+body #wrapper ul li div.accordion-content table tr:nth-of-type(2n) {
+  background: -webkit-linear-gradient(#898989, #cbcbcb);
+}
+body #wrapper ul li div.accordion-content table th {
+  background: -webkit-linear-gradient(#ececec, #898989);
+  padding: 5px 0 5px 5px;
+  border: 1px solid #000000;
+  text-align: left;
+}
+body #wrapper ul li div.accordion-content table th:first-of-type {
+  border-top-left-radius: 15px;
+}
+body #wrapper ul li div.accordion-content table td {
+  color: #FFFFFF;
+  padding: 5px;
+  border: 1px solid #000000;
+}
+/*# sourceMappingURL=task1.css.map */

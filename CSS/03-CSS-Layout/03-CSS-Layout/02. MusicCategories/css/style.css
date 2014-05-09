@@ -1,0 +1,78 @@
+﻿section {
+    width: 450px;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    padding: 5px 15px 30px 10px;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+}
+
+article {
+    width: 96%;
+    background-color: #FFFFFF;
+    border: 1px solid lightgray;
+    margin-top: 30px;
+    padding-right: 10px;
+}
+
+    article figure {
+        height: 100px;
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 8px;
+        float: left;
+    }
+
+figure img {
+    border: 1px solid lightgray;
+    width: 150px;
+}
+
+p {
+    padding-right: 20px;
+    padding-left: 10px;
+    padding-top: 0;
+    margin-top: 20px;
+    margin-right: 0;
+}
+
+.buttons {
+    position: relative;
+    padding: 0;
+    margin-left: 65px;
+    margin-top: 20px;
+    margin-right: -9px;
+    display: inline-block;
+}
+
+p::after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+}
+
+input[type=button] {
+    border-color: #E38181;
+}
+
+.listen {
+    color: white;
+    width: 90px;
+    height: 25px;
+    background: url(../img/listen-button.png) no-repeat red;
+}
+
+.add {
+    color: white;
+    width: 70px;
+    height: 25px;
+    background: url(../img/add-button.png) no-repeat red;
+}

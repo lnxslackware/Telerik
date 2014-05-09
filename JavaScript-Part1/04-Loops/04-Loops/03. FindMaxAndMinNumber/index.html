@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Find MAX and MIN numbers on a sequence</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        var sequence = [53, 64, 5, 64, 42.3, 26.74, 2, -6, 4, 43, 532, -10];
+        var min = sequence[0];
+        var max = sequence[0];
+        for (var i = 1; i < sequence.length; i++) {
+            if (sequence[i] < min) {
+                min = sequence[i];
+            }
+
+            if (sequence[i] > max) {
+                max = sequence[i];
+            }
+        }
+
+        jsConsole.writeLine("Min number: " + min);
+        jsConsole.writeLine("Max number: " + max);
+    </script>
+</body>
+</html>

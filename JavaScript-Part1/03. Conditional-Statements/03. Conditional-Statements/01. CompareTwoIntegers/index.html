@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Compare two integers and exchange values if the first one is greater</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="first-number">First integer: </label>
+    <input type="text" id="first-number" />
+    <label for="second-number">Second integer: </label>
+    <input type="text" id="second-number" />
+    <button onclick="compareAndExchange()">Compare</button>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        function compareAndExchange() {
+            var firstInteger = jsConsole.readInteger("#first-number");
+            var secondInteger = jsConsole.readInteger("#second-number");
+            if (firstInteger > secondInteger) {
+                firstInteger += secondInteger;
+                secondInteger = firstInteger - secondInteger;
+                firstInteger -= secondInteger;
+            }
+
+            jsConsole.write(firstInteger + " ");
+            jsConsole.writeLine(secondInteger);
+        }
+    </script>
+</body>
+</html>

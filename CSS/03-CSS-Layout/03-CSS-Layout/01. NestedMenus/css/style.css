@@ -1,0 +1,25 @@
+﻿ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav > ul:first-child > li:first-child > a {
+    text-decoration: underline;
+}
+
+.sub-list {
+    margin-left: -30px;
+    display: none;
+}
+
+.sub-list a {
+    color: gray;
+}
+
+li:hover > .sub-list {
+    display: block;
+}

@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Check if bit 3 is 0 or 1</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <input type="text" id="number" />
+    <button onclick="getThirdBit()">Check bit3</button>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        function getThirdBit() {
+            var checkedNumber = jsConsole.readInteger("#number");
+
+            var mask = 1 << 3;
+            var result = ((checkedNumber & mask) >> 3) == 1;
+
+            jsConsole.writeLine(result);
+        }
+    </script>
+</body>
+</html>

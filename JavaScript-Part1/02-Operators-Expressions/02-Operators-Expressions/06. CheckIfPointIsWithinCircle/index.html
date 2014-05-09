@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Check if the point is within the circle</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="x-position">X: </label>
+    <input type="text" id="x-position" />
+    <label for="y-position">Y: </label>
+    <input type="text" id="y-position" />
+    <button onclick="checkIfInCircle()">Check this point</button>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        function checkIfInCircle() {
+            var xPosition = jsConsole.readFloat("#x-position");
+            var yPosition = jsConsole.readFloat("#y-position");
+
+            var pointDistance = Math.sqrt(Math.pow(xPosition, 2) + Math.pow(yPosition, 2));
+            jsConsole.writeLine("The point is " + (pointDistance <= 5 ? "within" : "NOT within") + " the circle.");
+        }
+    </script>
+</body>
+</html>

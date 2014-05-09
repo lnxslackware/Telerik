@@ -1,0 +1,85 @@
+﻿body, div, aside, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: arial, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+
+    #wrapper {
+        width: 960px;
+    }
+
+    aside {
+        width: 215px;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-left: 20px;
+        background: #b5aaff; /* Old browsers */
+        background: -moz-linear-gradient(top, #D69AFF 0, #8c75ff 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#D69AFF), color-stop(100%,#8c75ff)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #D69AFF 0,#8c75ff 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #D69AFF 0,#8c75ff 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #D69AFF 0,#8c75ff 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #D69AFF 0,#8c75ff 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5aaff', endColorstr='#8c75ff',GradientType=0 ); /* IE6-9 */
+        
+        .sidebar {
+            margin: 5px 15px;
+
+            li {
+                padding: 5px 0;
+
+                & > a {
+                    font-size: 1.4em;
+                }
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 5px 0;
+
+            li {
+                border-bottom: 1px solid purple;
+                text-align: center;
+
+                &:last-of-type {
+                    border: none;
+                }
+
+                &:hover {
+                    border: 1px solid purple;
+                    border-radius: 5px;
+                    position: relative;
+
+                    ul {
+                        display: inline-block;
+                        position: absolute;
+                        top: 0;
+                        left: 190px;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+
+            ul {
+                background: url(imgs/arrow.png) no-repeat #B5AAFF;
+                background-position-x: 5px;
+                background-position-y: 10px;
+                display: none;
+                background-color: #B5AAFF;
+                font-size: 0.8em;
+                width: 220px;
+                border-radius: 10px;
+                padding-left: 20px;
+                padding-right: 5px;
+            }
+        }
+    }
+}

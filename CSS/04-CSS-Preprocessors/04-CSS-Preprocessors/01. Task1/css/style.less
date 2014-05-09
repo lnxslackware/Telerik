@@ -1,0 +1,172 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    a {
+        text-decoration: none;
+    }
+
+    .clearfix() {
+        zoom: 1;
+
+        &:after {
+            content: "";
+            clear: both;
+            height: 0;
+            display: block;
+        }
+    }
+
+    .common-rounded-border() {
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+
+    @default-padding: 20px;
+    @default-color: #9414F7;
+
+    color: white;
+    background-color: @default-color;
+    font-size: 14px;
+
+    & > header {
+        padding: @default-padding;
+        /* GRADIENT BACKGROUND */
+        background: #d696ff; /* Old browsers */
+        background: -moz-linear-gradient(top, #d696ff 0, #ce8ef7 23%, #bd71f7 49%, #ad4df7 75%, #9414f7 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#d696ff), color-stop(23%,#ce8ef7), color-stop(49%,#bd71f7), color-stop(75%,#ad4df7), color-stop(100%,#9414f7)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #d696ff 0,#ce8ef7 23%,#bd71f7 49%,#ad4df7 75%,#9414f7 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #d696ff 0,#ce8ef7 23%,#bd71f7 49%,#ad4df7 75%,#9414f7 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #d696ff 0,#ce8ef7 23%,#bd71f7 49%,#ad4df7 75%,#9414f7 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #d696ff 0,#ce8ef7 23%,#bd71f7 49%,#ad4df7 75%,#9414f7 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d696ff', endColorstr='#9414f7',GradientType=0 ); /* IE6-9 */
+        #header-container {
+            .clearfix();
+
+            #logo-container {
+                float: left;
+            }
+
+            #reg-form-container {
+                float: right;
+
+                input {
+                    border: 1px solid lightgray;
+                    .common-rounded-border();
+                    background-color: #9414f7;
+                    margin-bottom: 10px;
+                    height: 20px;
+                }
+
+                button {
+                    .common-rounded-border();
+                    width: 80px;
+                    height: 30px;
+                    color: white;
+                    background: rgba(0, 0, 0, 0);
+                    border: 1px outset lightgray;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        nav {
+            .common-rounded-border();
+            display: inline-block;
+            margin: 20px;
+            padding: 12px;
+            width: 78%;
+
+            ul {
+                list-style-type: none;
+
+                li {
+                    display: inline;
+                    float: left;
+                    position: relative;
+
+                    &:not(:first-child) {
+                        margin-left: 10px;
+                    }
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        font: 1.4em normal Arial;
+                    }
+                }
+
+                ul {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    section {
+        padding: @default-padding;
+        width: 75%;
+        float: left;
+
+        article {
+            padding: @default-padding;
+            .common-rounded-border();
+            margin-bottom: 20px;
+
+            h1 {
+                font-size: 1.4em;
+            }
+
+            footer {
+                text-align: right;
+
+                a {
+                    color: rgba(255, 255, 255, 0.5);
+                }
+            }
+        }
+    }
+
+    aside {
+        padding: @default-padding;
+        float: right;
+        .clearfix();
+        width: 20%;
+
+        a {
+            opacity: 0.3;
+        }
+
+        & > ul {
+            list-style-type: none;
+
+            & > li {
+                .common-rounded-border();
+                padding: @default-padding;
+                margin-bottom: 20px;
+
+                h2 {
+                    font-size: 1.2em;
+                }
+
+                ul {
+                    list-style-type: none;
+
+                    li {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+
+    & > footer {
+        padding-bottom: @default-padding;
+        clear: both;
+        text-align: center;
+        font-weight: bold;
+    }
+}

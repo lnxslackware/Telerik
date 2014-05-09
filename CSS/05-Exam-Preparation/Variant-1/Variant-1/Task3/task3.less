@@ -1,0 +1,121 @@
+﻿body, div, ul, li, span, p, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    .clearfix() {
+        zoom: 1;
+
+        &:after {
+            display: block;
+            clear: both;
+            content: "";
+            height: 0;
+        }
+    }
+
+    .msg-padding(@right, @left) {
+        padding: 5px @right 5px @left;
+    }
+
+    #wrapper {
+        width: 960px;
+        font-size: 16px;
+        font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
+
+        & > div {
+            margin-top: 30px;
+            margin-left: 30px;
+            padding: 5px 15px;
+            width: 350px;
+            border: 1px solid #000000;
+            border-radius: 15px;
+            background: -webkit-linear-gradient(#f7f3f7, #adaaad);
+
+            h1 {
+                color: #5a555a;
+                font-size: 1.8em;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-left: 10px;
+            }
+
+            ul {
+                .clearfix();
+                list-style-type: none;
+
+                li {
+                    width: 200px;
+                    .clearfix();
+                    clear: both;
+                    border: 1px solid #000000;
+                    border-radius: 15px;
+                    margin-bottom: 5px;
+                    color: #525552;
+
+                    &.me-item {
+                        float: right;
+                        .msg-padding(15px, 15px);
+                        background: -webkit-linear-gradient(#29efff, #c6fbff);
+
+
+                        span.date {
+                            float: right;
+                        }
+                    }
+
+                    &.toshko-item {
+                        float: left;
+                        .msg-padding(15px, 15px);
+                        background: -webkit-linear-gradient(#deffd6, #73ff39);
+
+
+                        span.date {
+                            float: left;
+                        }
+
+                        span:first-of-type {
+                            display: block;
+                            text-align: right;
+                        }
+                    }
+
+                    span:first-of-type {
+                        font-weight: bold;
+                        font-size: 1.1em;
+                    }
+
+                    span.date {
+                        font-family: Consolas;
+                        font-size: 0.8em;
+                    }
+                }
+            }
+
+            input[type=text] {
+                border-radius: 5px;
+                border: none;
+                width: 245px;
+                padding: 10px 15px;
+                background-color: #efefef;
+                color: #525552;
+                font-size: 0.8em;
+            }
+
+            button {
+                font-size: 1.1em;
+                border: none;
+                border-radius: 5px;
+                padding: 5px 15px;
+                background: -webkit-linear-gradient(#efefef, #adaead);
+
+                &:hover {
+                    background: none;
+                    background-color: #FFFFFF;
+                }
+            }
+        }
+    }
+}

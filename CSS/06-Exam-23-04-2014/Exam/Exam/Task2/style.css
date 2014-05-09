@@ -1,0 +1,88 @@
+﻿body,
+div,
+ul,
+li,
+a,
+p,
+img,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+  font-size: 16px;
+}
+body #wrapper {
+  width: 960px;
+}
+body #wrapper ul {
+  list-style-type: none;
+  margin-top: 5px;
+  margin-left: 4px;
+}
+body #wrapper ul li {
+  text-align: center;
+  padding: 5px 30px 0 30px;
+  border: 20px solid #808080;
+  display: inline-block;
+  background: -webkit-linear-gradient(#727272, #ffffff);
+}
+body #wrapper ul li:not(:first-of-type) {
+  margin-left: 1px;
+}
+body #wrapper ul li h3 {
+  color: #FFFFFF;
+}
+body #wrapper ul li div.image-container {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+body #wrapper ul li div.image-container img {
+  width: 120px;
+  height: 100px;
+  border: none;
+  border-radius: 20px;
+}
+body #wrapper ul li p {
+  margin-top: 4px;
+  margin-bottom: 14px;
+}
+body #wrapper ul li p.click-here {
+  text-transform: uppercase;
+  color: #ffffff;
+  display: none;
+}
+body #wrapper ul li:hover {
+  background: none;
+  background-color: #808080;
+  border-color: #454545;
+  /*padding-left: 17px;
+                    padding-right: 17px;
+                    padding-top: 5px;*/
+  margin: 0;
+  padding: 0 17px;
+}
+body #wrapper ul li:hover h3 {
+  margin-top: 5px;
+  text-decoration: underline;
+}
+body #wrapper ul li:hover div.image-container {
+  margin-bottom: 0;
+  padding: 0;
+}
+body #wrapper ul li:hover div.image-container img {
+  width: 140px;
+  height: 110px;
+}
+body #wrapper ul li:hover p {
+  padding: 0;
+  margin-bottom: 5px;
+}
+body #wrapper ul li:hover p.subtitle {
+  display: none;
+}
+body #wrapper ul li:hover p.click-here {
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */

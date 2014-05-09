@@ -1,0 +1,86 @@
+﻿body, div, ul, li, a, span, img {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    #wrapper {
+        margin: 25px;
+        width: 960px;
+        font-family: 'Courier New', Courier, 'Nimbus Mono L', monospace;
+        font-size: 16px;
+
+        img {
+            width: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                color: #777777;
+            }
+        }
+
+            ul.notification-list {
+                border: 1px solid black;
+                border-bottom: none;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                width: 470px;
+                background: -webkit-linear-gradient(#ababab, #dddddd);
+                position: relative;
+
+                & > li {
+                    display: inline-block;
+                    font-size: 1.2em;
+                    border-bottom: 1px solid black;
+                    padding: 5px 15px;
+
+                    &:first-of-type {
+                        border-right: 1px solid black;
+                    }
+
+                    &:last-of-type {
+                        border-left: 1px solid black;
+                    }
+
+                    .content {
+                        display: none;
+                    }
+
+                    &:hover {
+                        border-bottom: none;
+
+                        div.content {
+                            font-size: 0.85em;
+                            float: left;
+                            width: 455px;
+                            position: absolute;
+                            left: -1px;
+                            top: 32px;
+                            display: block;
+                            background-color: #dddddd;
+                            border: 1px solid black;
+                            border-top: none;
+                            padding-left: 15px;
+                            padding-top: 5px;
+
+                            img {
+                                margin-right: 5px;
+                            }
+
+                            li {
+                                margin-bottom: 10px;
+
+                                &:hover span {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}

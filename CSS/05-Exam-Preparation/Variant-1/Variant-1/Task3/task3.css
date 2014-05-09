@@ -1,0 +1,105 @@
+﻿body,
+div,
+ul,
+li,
+span,
+p,
+button {
+  margin: 0;
+  padding: 0;
+}
+body #wrapper {
+  width: 960px;
+  font-size: 16px;
+  font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
+}
+body #wrapper > div {
+  margin-top: 30px;
+  margin-left: 30px;
+  padding: 5px 15px;
+  width: 350px;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  background: -webkit-linear-gradient(#f7f3f7, #adaaad);
+}
+body #wrapper > div h1 {
+  color: #5a555a;
+  font-size: 1.8em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+body #wrapper > div ul {
+  zoom: 1;
+  list-style-type: none;
+}
+body #wrapper > div ul:after {
+  display: block;
+  clear: both;
+  content: "";
+  height: 0;
+}
+body #wrapper > div ul li {
+  width: 200px;
+  zoom: 1;
+  clear: both;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  color: #525552;
+}
+body #wrapper > div ul li:after {
+  display: block;
+  clear: both;
+  content: "";
+  height: 0;
+}
+body #wrapper > div ul li.me-item {
+  float: right;
+  padding: 5px 15px 5px 15px;
+  background: -webkit-linear-gradient(#29efff, #c6fbff);
+}
+body #wrapper > div ul li.me-item span.date {
+  float: right;
+}
+body #wrapper > div ul li.toshko-item {
+  float: left;
+  padding: 5px 15px 5px 15px;
+  background: -webkit-linear-gradient(#deffd6, #73ff39);
+}
+body #wrapper > div ul li.toshko-item span.date {
+  float: left;
+}
+body #wrapper > div ul li.toshko-item span:first-of-type {
+  display: block;
+  text-align: right;
+}
+body #wrapper > div ul li span:first-of-type {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+body #wrapper > div ul li span.date {
+  font-family: Consolas;
+  font-size: 0.8em;
+}
+body #wrapper > div input[type=text] {
+  border-radius: 5px;
+  border: none;
+  width: 245px;
+  padding: 10px 15px;
+  background-color: #efefef;
+  color: #525552;
+  font-size: 0.8em;
+}
+body #wrapper > div button {
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  background: -webkit-linear-gradient(#efefef, #adaead);
+}
+body #wrapper > div button:hover {
+  background: none;
+  background-color: #FFFFFF;
+}
+/*# sourceMappingURL=task3.css.map */

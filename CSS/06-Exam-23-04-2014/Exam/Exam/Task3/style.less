@@ -1,0 +1,66 @@
+﻿body, div, a, label, input, ul, h1, li, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: Corbel;
+
+    #root {
+        width: 325px;
+        margin-left: 5px;
+        margin-top: 3px;
+        border-top: 3px solid black;
+        border-left: 3px solid black;
+        border-top-left-radius: 15px;
+        padding: 25px 25px;
+
+        h1 {
+            font-size: 1.9em;
+            margin-left: -55px;
+            margin-top: -7px;
+            margin-bottom: 19px;
+            text-align: center;
+        }
+
+        div.box {
+            width: 275px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1em;
+            text-align: right;
+            padding-right: 15px;
+            padding-top: 15px;
+            background: -webkit-linear-gradient(#cbf7be, #e5d96e);
+
+            input {
+                font-style: italic;
+                font-size: 0.9em;
+                padding: 5px 0 5px 15px;
+                margin-bottom: 5px;
+                border: 3px inset #cbf7be;
+                border-radius: 5px;
+                background-color: rgba(0, 0, 0, 0);
+            }
+
+            div.dropdown {
+                display: inline-block;
+
+                span.chosen {
+                    margin-right: 30px;
+                    background: url(images/down-arrow.png) no-repeat;
+                    background-position: left bottom;
+                    padding-left: 20px;
+                    font-weight: normal;
+                }
+
+                ul {
+                    display: none;
+                    list-style-type: none;
+                }
+            }
+        }
+    }
+}

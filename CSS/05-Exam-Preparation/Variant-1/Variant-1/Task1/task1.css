@@ -1,0 +1,86 @@
+﻿body,
+div,
+aside,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+  font-family: arial, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+}
+body #wrapper {
+  width: 960px;
+}
+body aside {
+  width: 215px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 20px;
+  background: #b5aaff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #d69aff 0, #8c75ff 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d69aff), color-stop(100%, #8c75ff));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #d69aff 0, #8c75ff 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #d69aff 0, #8c75ff 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #d69aff 0, #8c75ff 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #d69aff 0, #8c75ff 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b5aaff', endColorstr='#8c75ff', GradientType=0);
+  /* IE6-9 */
+}
+body aside .sidebar {
+  margin: 5px 15px;
+}
+body aside .sidebar li {
+  padding: 5px 0;
+}
+body aside .sidebar li > a {
+  font-size: 1.4em;
+}
+body aside ul {
+  list-style-type: none;
+  padding: 5px 0;
+}
+body aside ul li {
+  border-bottom: 1px solid purple;
+  text-align: center;
+}
+body aside ul li:last-of-type {
+  border: none;
+}
+body aside ul li:hover {
+  border: 1px solid purple;
+  border-radius: 5px;
+  position: relative;
+}
+body aside ul li:hover ul {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 190px;
+}
+body aside ul li a {
+  text-decoration: none;
+  color: black;
+}
+body aside ul ul {
+  background: url(imgs/arrow.png) no-repeat #b5aaff;
+  background-position-x: 5px;
+  background-position-y: 10px;
+  display: none;
+  background-color: #B5AAFF;
+  font-size: 0.8em;
+  width: 220px;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 5px;
+}
+/*# sourceMappingURL=task1.css.map */

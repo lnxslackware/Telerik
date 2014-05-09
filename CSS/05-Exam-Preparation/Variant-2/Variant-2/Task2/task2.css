@@ -1,0 +1,77 @@
+﻿body,
+div,
+ul,
+li,
+a,
+span,
+img {
+  margin: 0;
+  padding: 0;
+}
+body #wrapper {
+  margin: 25px;
+  width: 960px;
+  font-family: 'Courier New', Courier, 'Nimbus Mono L', monospace;
+  font-size: 16px;
+}
+body #wrapper img {
+  width: 15px;
+}
+body #wrapper ul {
+  list-style-type: none;
+}
+body #wrapper ul a {
+  text-decoration: none;
+  color: #777777;
+}
+body #wrapper ul.notification-list {
+  border: 1px solid black;
+  border-bottom: none;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 470px;
+  background: -webkit-linear-gradient(#ababab, #dddddd);
+  position: relative;
+}
+body #wrapper ul.notification-list > li {
+  display: inline-block;
+  font-size: 1.2em;
+  border-bottom: 1px solid black;
+  padding: 5px 15px;
+}
+body #wrapper ul.notification-list > li:first-of-type {
+  border-right: 1px solid black;
+}
+body #wrapper ul.notification-list > li:last-of-type {
+  border-left: 1px solid black;
+}
+body #wrapper ul.notification-list > li .content {
+  display: none;
+}
+body #wrapper ul.notification-list > li:hover {
+  border-bottom: none;
+}
+body #wrapper ul.notification-list > li:hover div.content {
+  font-size: 0.85em;
+  float: left;
+  width: 455px;
+  position: absolute;
+  left: -1px;
+  top: 32px;
+  display: block;
+  background-color: #dddddd;
+  border: 1px solid black;
+  border-top: none;
+  padding-left: 15px;
+  padding-top: 5px;
+}
+body #wrapper ul.notification-list > li:hover div.content img {
+  margin-right: 5px;
+}
+body #wrapper ul.notification-list > li:hover div.content li {
+  margin-bottom: 10px;
+}
+body #wrapper ul.notification-list > li:hover div.content li:hover span {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=task2.css.map */

@@ -1,0 +1,103 @@
+﻿body, div, ul, li, a, table, thead, tbody, tfoot, td, tr, h1, p, th {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    #wrapper {
+        width: 960px;
+        font-size: 18px;
+        font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+
+        ul {
+            border: 1px solid #000000;
+            margin-top: 50px;
+            margin-left: 50px;
+            list-style-type: none;
+            width: 400px;
+            text-align: center;
+
+            li {
+                border-bottom: 2px solid #000000;
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+
+                &:hover {
+                    background: none;
+                    background-color: #aaaaaa;
+                }
+
+                &.current {
+
+                    div.accordion-content {
+                        display: block;
+                        padding: 5px 15px;
+                        text-align: left;
+                        background-color: #aaaaaa;
+                        color: #444444;
+                    }
+                }
+
+                a {
+                    background: -webkit-linear-gradient(top, #eeeeee 0, #aaaaaa 75%); /* Chrome10+,Safari5.1+ */
+                    display: block;
+                    text-decoration: none;
+                    color: #444444;
+                    font-weight: bold;
+                    font-size: 1.3em;
+                }
+
+                div.accordion-content {
+                    display: none;
+
+                    h1 {
+                        color: #5e5e5e;
+                        text-align: center;
+                        font-size: 1.6em;
+                        padding: 5px 0;
+                    }
+
+                    p {
+                        text-align: justify;
+                    }
+
+                    table {
+                        margin: 15px 0 15px 5px;
+                        border: 1px solid #000000;
+                        border-collapse: collapse;
+                        text-align: center;
+
+                        tr {
+                            &:nth-of-type(2n+1) {
+                                background: -webkit-linear-gradient(#cbcbcb, #898989);
+                            }
+                            
+                            &:nth-of-type(2n) {
+                                background: -webkit-linear-gradient(#898989, #cbcbcb);
+                            }
+                        }
+
+                        th {
+                            background: -webkit-linear-gradient(#ececec, #898989);
+                            padding: 5px 0 5px 5px;
+                            border: 1px solid #000000;
+                            text-align: left;
+
+                            &:first-of-type {
+                                border-top-left-radius: 15px;
+                            }
+                        }
+
+                        td {
+                            color: #FFFFFF;
+                            padding: 5px;
+                            border: 1px solid #000000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

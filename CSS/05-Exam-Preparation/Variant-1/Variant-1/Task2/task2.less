@@ -1,0 +1,99 @@
+﻿body, div, ul, li, a, table, thead, tbody, tfoot, td, tr {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 960px;
+    font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
+    font-size: 16px;
+
+    #wrapper {
+        width: 340px;
+        height: 230px;
+        border: 1px solid black;
+        border-radius: 5px;
+        position: relative;
+        left: 15px;
+        top: 15px;
+
+        .tab-strip {
+            position: relative;
+            list-style-type: none;
+
+            & > li {
+                display: inline-block;
+                border-bottom: 1px solid #000000;
+                border-right: 1px solid #000000;
+                background: -webkit-linear-gradient(#EFEFEF, #ADAAAD);
+                border-radius: 5px;
+                padding: 5px 15px;
+
+                &:last-of-type {
+                    border-right: none;
+                }
+
+                &:hover:not(.current) {
+                    background: #EFEFEF;
+                }
+
+                a {
+                    font-size: 1.4em;
+                    color: #000000;
+                    text-decoration: none;
+                }
+
+                .tab-btn {
+                }
+            }
+
+            div.tab-content {
+                display: none;
+            }
+
+            .current {
+                border: none;
+                background: #FFFFFF;
+                border-right: 1px solid #000000;
+
+                a {
+                    font-weight: bold;
+                }
+
+                .tab-content {
+                    display: block;
+                    position: absolute;
+                    left: 20px;
+                    top: 50px;
+
+                    ul {
+                        list-style-type: square;
+
+                        ul {
+                            padding-left: 25px;
+                            list-style-type: lower-alpha;
+                        }
+                    }
+
+                    table {
+                        border: 1px solid #000000;
+                        border-spacing: 0;
+                        border-collapse: collapse;
+
+                        th {
+                            padding: 5px 15px;
+                            border: 1px solid #000000;
+                            background: -webkit-linear-gradient(#ADAAAD, #EFEFEF);
+                        }
+
+                        td {
+                            padding: 5px;
+                            border: 1px solid #000000;
+                            background-color: #EFEFEF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

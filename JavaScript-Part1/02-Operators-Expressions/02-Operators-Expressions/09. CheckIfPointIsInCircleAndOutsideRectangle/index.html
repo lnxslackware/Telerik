@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Check if point is within circle and outside rectangle</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="x-position">X: </label>
+    <input type="text" id="x-position" />
+    <label for="y-position">Y: </label>
+    <input type="text" id="y-position" />
+    <button onclick="checkPointPosition()">Check this point</button>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        function checkPointPosition() {
+            var xPosition = jsConsole.readFloat("#x-position");
+            var yPosition = jsConsole.readFloat("#y-position");
+            var circleRadius = 3;
+            var rectangleWidth = 6;
+            var rectangleHeight = 2;
+            var rectangleLeftSide = -1;
+            var rectangleTopSide = 1;
+
+            var pointDistance = Math.sqrt(Math.pow(xPosition, 2) + Math.pow(yPosition, 2));
+            if (xPosition < 0) {
+                circleRadius -= 1.1;
+            } else {
+                circleRadius += 1.1;
+            }
+
+            var pointIsInCircle = pointDistance <= circleRadius;
+
+            var pointXIsInRectangle = (xPosition >= rectangleLeftSide) && (xPosition <= rectangleTopSide + rectangleWidth);
+            var pointYIsInRectangle = (yPosition >= rectangleTopSide - rectangleHeight) && (yPosition <= rectangleTopSide);
+            var pointIsInRectangle = pointXIsInRectangle && pointYIsInRectangle;
+
+            jsConsole.write("The point is ");
+            jsConsole.write(pointIsInCircle ? "within the circle and " : "NOT within the circle and ");
+            jsConsole.writeLine(pointIsInRectangle ? "in the rectangle." : "OUTSIDE the rectangle.");
+        }
+    </script>
+</body>
+</html>

@@ -25,8 +25,8 @@ class SolveQuadraticEquation
         else
         {
             Console.WriteLine("The quadratic equation has two real roots:");
-            Console.WriteLine("x1 = {0}", (-b + Math.Sqrt(discriminant)) / 2 * a);
-            Console.WriteLine("x2 = {0}", (-b - Math.Sqrt(discriminant)) / 2 * a);
+            Console.WriteLine("x1 = {0}", (-b + Math.Sqrt(discriminant)) / (2 * a));
+            Console.WriteLine("x2 = {0}", (-b - Math.Sqrt(discriminant)) / (2 * a));
         }
     }
 }

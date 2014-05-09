@@ -1,0 +1,64 @@
+﻿body, ul, li, img {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding-top: 30px;
+
+    .clearfix() {
+        zoom: 1;
+
+        &:after {
+            display: block;
+            clear: both;
+            height: 0;
+            content: "";
+        }
+    }
+
+    section {
+        margin: 0 auto 0 auto;
+        width: 80%;
+
+        ul {
+            list-style-type: none;
+            position: relative;
+            .clearfix();
+
+            li {
+                display: inline-block;
+                float: left;
+                margin-left: 10px;
+
+                img {
+                    width: 130px;
+                    border: 1px solid gray;
+                }
+            }
+        }
+
+        #preview {
+
+            position:relative;
+
+            img {
+                display: none;
+            }
+
+            input[type=checkbox] {
+                visibility: hidden;
+
+                &:checked + img {
+                    position: absolute;
+                    top: 0;
+                    display: inline;
+                    left: 0;
+                    width: 200px;/*
+                    bottom: -200px;
+                    left: 0;*/
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Data Types and Variables</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Task 1: Assign all the possible JavaScript literals to different variables.
+        var number = 5;
+        var floatNumber = 3.14;
+        var str = "test";
+        var bool = true;
+        var arr = ["test", 3.14, 3];
+        var obj = { firstName: "John", lastName: "Doe" };
+
+        //Task 2: Create a string variable with quoted text in it. For example: "How you doin'?", Joey said.
+        var quotedStr = "\"How you doin\'?\", Joey said.";
+
+        //Task 3: Try typeof on all variables you created.
+        jsConsole.writeLine(typeof (number));
+        jsConsole.writeLine(typeof (floatNumber));
+        jsConsole.writeLine(typeof (str));
+        jsConsole.writeLine(typeof (bool));
+        jsConsole.writeLine(typeof (arr));
+        jsConsole.writeLine(typeof (obj));
+        jsConsole.writeLine(typeof (quotedStr));
+
+        //Task 4: Create null, undefined variables and try typeof on them.
+        var nullVariable = null;
+        var undefinedVariable = undefined;
+
+        jsConsole.writeLine(typeof (nullVariable));
+        jsConsole.writeLine(typeof (undefinedVariable));
+    </script>
+</body>
+</html>
