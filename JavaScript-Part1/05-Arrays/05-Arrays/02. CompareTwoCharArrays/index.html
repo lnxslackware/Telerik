@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Compare two char arrays lexicographically</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        var firstArray = ["g", "o", "t", "h", "a", "m"];
+        var secondArray = ["m", "e", "t", "r", "o", "p", "o", "l", "i", "s"];
+        var longerArr = firstArray.length;
+        var shorterArr = secondArray.length;
+        if (longerArr < shorterArr) {
+            longerArr = secondArray.length;
+            shorterArr = firstArray.length;
+        }
+
+        for (var i = 0; i < shorterArr; i++) {
+            var comapredChars = firstArray[i] === secondArray[i] ? "=" : firstArray[i] > secondArray[i] ? ">" : "<";
+            jsConsole.writeLine(firstArray[i] + " " + comapredChars + " " + secondArray[i]);
+        }
+    </script>
+</body>
+</html>

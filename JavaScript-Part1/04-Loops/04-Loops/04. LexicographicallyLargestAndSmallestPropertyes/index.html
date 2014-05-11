@@ -8,21 +8,48 @@
     <div id="js-console"></div>
     <script src="../scripts/js-console.js"></script>
     <script>
-        var objects = [document, window];
-        var propertyArray;
+        var objects = [document, window, navigator];
+        var minProperty;
+        var maxProperty;
 
+        //Variant 1 - without arrays
         for (var i = 0; i < objects.length; i++) {
-            propertyArray = new Array();
+            var initialPropertyLoop = true;
             for (var property in objects[i]) {
-                propertyArray.push(property);
+                if (initialPropertyLoop === true) {
+                    initialPropertyLoop = false;
+                    minProperty = property;
+                    maxProperty = property;
+                }
+
+                if (minProperty > property) {
+                    minProperty = property;
+                }
+
+                if (maxProperty < property) {
+                    maxProperty = property;
+                }
             }
 
-            propertyArray.sort();
-
             jsConsole.write("For '" + objects[i] + "': ");
-            jsConsole.write("Smallest: " + propertyArray[0] + " ");
-            jsConsole.writeLine("Largest: " + propertyArray[propertyArray.length - 1]);
+            jsConsole.write("Smallest - " + minProperty + "; ");
+            jsConsole.writeLine("Largest - " + maxProperty + ";");
         }
+
+        //Variant 2 - with arrays
+        //var propertyArray;
+        //for (var i = 0; i < objects.length; i++) {
+        //    propertyArray = new Array();
+        //    for (var property in objects[i]) {
+        //        propertyArray.push(property);
+        //    }
+
+        //    propertyArray.sort();
+
+        //    jsConsole.write("For '" + objects[i] + "': ");
+        //    jsConsole.write("Smallest - " + propertyArray[0] + "; ");
+        //    jsConsole.writeLine("Largest - " + propertyArray[propertyArray.length - 1] + ";");
+        //}
     </script>
 </body>
 </html>
