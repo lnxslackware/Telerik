@@ -80,11 +80,14 @@ function HideMenu1() {
 
 function ShowMenu1() {
     if (b == "Netscape") {
-        theLayer = eval('document.layers[\'menu1\']'); theLayer.visibility = 'show';
+        theLayer = eval('document.layers[\'menu1\']');
+        theLayer.visibility = 'show';
     } else {
-        theLayer = eval('document.all[\'menu1\']'); theLayer.style.visibility = 'visible';
+        theLayer = eval('document.all[\'menu1\']');
+        theLayer.style.visibility = 'visible';
     }
-}//
+}
+//
 
 function HideMenu2() {
     if (b == "Netscape") {

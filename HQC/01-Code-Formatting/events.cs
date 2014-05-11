@@ -144,7 +144,10 @@ class Program
 
     static void Main(string[] args)
     {
-        while (ExecuteNextCommand()) { }
+        while (ExecuteNextCommand())
+        {
+        }
+
         Console.WriteLine(output);
     }
 
