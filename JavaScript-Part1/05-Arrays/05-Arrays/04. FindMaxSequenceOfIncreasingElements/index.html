@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Find the maximal sequence of increasing elements in the array</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        var arr = [3, 2, 3, 4, 2, 2, 4];
+        var maximalFoundSequence = 0,
+            currentFoundSequence = 0,
+            lastElementOfMaxSequenceIndex = 0,
+            previousElementValue = "";
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] - 1 === previousElementValue) {
+                currentFoundSequence++;
+            } else {
+                if (currentFoundSequence > maximalFoundSequence) {
+                    maximalFoundSequence = currentFoundSequence;
+                    lastElementOfMaxSequenceIndex = i - 1;
+                }
+
+                currentFoundSequence = 0;
+            }
+
+            previousElementValue = arr[i];
+        }
+
+        if (maximalFoundSequence > 0) {
+            var maximalSequence = arr.slice(lastElementOfMaxSequenceIndex - maximalFoundSequence, lastElementOfMaxSequenceIndex + 1);
+            jsConsole.writeLine("{" + maximalSequence.join(", ") + "}");
+        } else {
+            jsConsole.writeLine("There is no sequence of equal increasing in the array.");
+        }
+    </script>
+</body>
+</html>

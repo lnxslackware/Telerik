@@ -57,6 +57,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="05. SelectionSortAlgoritm\index.html" />
+    <Content Include="06. FindMostFrequentNumber\index.html" />
+    <Content Include="07. BinarySearchAlgoritm\index.html" />
     <Content Include="styles\js-console.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -68,6 +71,8 @@
   <ItemGroup>
     <Content Include="01. CreateArrayWith20Elements\index.html" />
     <Content Include="02. CompareTwoCharArrays\index.html" />
+    <Content Include="03. FindMaxSequenceOfEqualElements\index.html" />
+    <Content Include="04. FindMaxSequenceOfIncreasingElements\index.html" />
     <Content Include="scripts\js-console.js" />
     <Content Include="styles\js-console.css" />
     <Content Include="styles\js-console.min.css" />
@@ -76,6 +81,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

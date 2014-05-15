@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Binary search algoritm</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        function binSearch(item, array, leftIndex, rightIndex) {
+            if ((array instanceof Array) === false) {
+                throw "The array parameter must be Array!";
+            }
+
+            if (leftIndex === undefined) {
+                leftIndex = 0;
+            }
+
+            if (rightIndex === undefined) {
+                rightIndex = array.length - 1;
+            }
+
+            if (rightIndex - leftIndex < 0) {
+                return -1;
+            }
+
+            var middle = Math.floor((rightIndex + leftIndex) / 2);
+
+            if (array[middle] === item) {
+                return middle;
+            } else {
+                if (item > array[middle]) {
+                    return binSearch(item, array, middle+1, rightIndex);
+                } else {
+                    return binSearch(item, array, leftIndex, middle-1);
+                }
+            }
+        }
+
+        var arr = [1, 5, 6, 2, 7, 17, 35];
+        arr.sort(function (a, b) {
+            return a - b;
+        });
+        var index = binSearch(7, arr);
+        jsConsole.writeLine(index);
+    </script>
+</body>
+</html>

@@ -8,18 +8,52 @@
     <div id="js-console"></div>
     <script src="../scripts/js-console.js"></script>
     <script>
-        var firstArray = ["g", "o", "t", "h", "a", "m"];
-        var secondArray = ["m", "e", "t", "r", "o", "p", "o", "l", "i", "s"];
-        var longerArr = firstArray.length;
-        var shorterArr = secondArray.length;
-        if (longerArr < shorterArr) {
-            longerArr = secondArray.length;
-            shorterArr = firstArray.length;
+        var firstArray = ["g", "o", "t", "h", "a", "m"],
+            secondArray = ["m", "e", "t", "r", "o", "p", "o", "l", "i", "s"],
+            shorterArr = firstArray.length,
+            firstArrayIsLonger = true,
+            firstIsLexicographicallySmaller = false,
+            secondArrayIsLonger = false,
+            secondIsLexicographicallySmaller = false;
+        if (firstArray.length > secondArray.length) {
+            shorterArr = secondArray.length;
+            firstArrayIsLonger = false;
+            secondArrayIsLonger = true;
         }
 
         for (var i = 0; i < shorterArr; i++) {
-            var comapredChars = firstArray[i] === secondArray[i] ? "=" : firstArray[i] > secondArray[i] ? ">" : "<";
-            jsConsole.writeLine(firstArray[i] + " " + comapredChars + " " + secondArray[i]);
+            if (firstArray[i] < secondArray[i]) {
+                firstIsLexicographicallySmaller = true;
+                break;
+            }
+
+            if (firstArray[i] > secondArray[i]) {
+                secondIsLexicographicallySmaller = true;
+                break;
+            }
+            //var comapredChars = firstArray[i] === secondArray[i] ? "=" : firstArray[i] > secondArray[i] ? ">" : "<";
+            //jsConsole.writeLine(firstArray[i] + " " + comapredChars + " " + secondArray[i]);
+        }
+
+        if (firstIsLexicographicallySmaller === false && secondIsLexicographicallySmaller === false) {
+            if (firstArray.length > secondArray.length) {
+                jsConsole.writeLine("The second array is lexicographically smaller.");
+            } else if (firstArray.length < secondArray.length)
+            {
+                jsConsole.writeLine("The first array is lexicographically smaller.");
+            } else {
+                jsConsole.writeLine("The two arrays are lexicographically equal.");
+            }
+        } else {
+            if (firstIsLexicographicallySmaller === true) {
+                jsConsole.write("The first array ");
+            }
+
+            if (secondIsLexicographicallySmaller === true) {
+                jsConsole.write("The second array ");
+            }
+
+            jsConsole.writeLine("is lexicographically smaller.");
         }
     </script>
 </body>
