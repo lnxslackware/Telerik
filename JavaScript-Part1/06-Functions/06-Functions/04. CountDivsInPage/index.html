@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <button onclick="countDivsInPage()">Count divs in page</button>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        function countDivsInPage() {
+            var count = document.getElementsByTagName("div").length;
+            jsConsole.writeLine(count);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Reverse the digits of a number</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <input type="text" id="number" placeholder="Enter number" />
+    <button onclick="reverseNumber()">Reverse digits</button>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        function reverseNumber() {
+            var numberAsString = jsConsole.read("#number"),
+                reversedNumberAsString = "";
+            for (var i = 0; i < numberAsString.length; i++) {
+                reversedNumberAsString += numberAsString[numberAsString.length - i - 1];
+            }
+
+            jsConsole.writeLine(reversedNumberAsString);
+        }
+    </script>
+</body>
+</html>
