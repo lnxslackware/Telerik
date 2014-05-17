@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Write a function that finds how many times a given substring is contained in a given text</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        var substring = "in";
+        var text = "We are living in an yellow submarine. We don't have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days.";
+        jsConsole.writeLine(countSubstringRepeats(substring, text));
+
+        function countSubstringRepeats(substr, text) {
+            counter = 0;
+            index = 0;
+            while (index > -1) {
+                index = text.toLowerCase().indexOf(substr.toLowerCase(), index+1);
+                if (index > -1) {
+                    counter++;
+                }
+            }
+
+            return counter;
+        }
+    </script>
+</body>
+</html>

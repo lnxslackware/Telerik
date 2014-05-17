@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Function that parses url in format [protocol]://[server]/[resource]</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <input type="text" id="url" />
+    <button onclick="getUrlJsonObject()">Parse</button>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        function getUrlJsonObject() {
+            var url = jsConsole.read("#url");
+            var urlJson = parseUrl(url);
+            jsConsole.write("{");
+            for (var prop in urlJson) {
+                jsConsole.write(prop + " : " + urlJson[prop]);
+                if (prop !== "resource") {
+                    jsConsole.writeLine("");
+                }
+            }
+
+            jsConsole.writeLine("}");
+        }
+
+        function parseUrl(url) {
+            var protocol = url.slice(0, url.indexOf(":"));
+            var server = url.slice(url.indexOf("//") + 2, url.indexOf("/", url.indexOf("//") + 2));
+            var resource = url.slice(url.indexOf("/", url.indexOf("//") + 2), url.length);
+
+            var result = {};
+            result["protocol"] = protocol;
+            result["server"] = server;
+            result["resource"] = resource;
+
+            return result;
+        }
+    </script>
+</body>
+</html>

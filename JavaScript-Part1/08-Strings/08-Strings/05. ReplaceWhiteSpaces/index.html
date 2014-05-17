@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Replace all white spaces with nbsp</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script src="../scripts/string-extensions.js"></script>
+    <script>
+        String.prototype.replaceWhiteSpaces = function (replaceString) {
+            var stringAsArray = this.split("");
+            for (var i = 0; i < stringAsArray.length; i++) {
+                if (stringAsArray[i] === " ") {
+                    stringAsArray[i] = replaceString;
+                }
+            }
+
+            return stringAsArray.join("");
+        }
+
+        var text = " A sample text to replace whitespaces in. ";
+        text = text.replaceWhiteSpaces("&nbsp;");
+        jsConsole.writeLine(text);
+        jsConsole.write("<em>Inspect element to see</em>");
+    </script>
+</body>
+</html>

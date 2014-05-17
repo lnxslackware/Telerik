@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Extract the content of a html page given as text</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        var html = '<html><head><title>Sample site</title></head><body><div>text<div>more text</div>and more...</div>in body</body></html>';
+        jsConsole.writeLine(getContentFromHtml(html));
+
+        function getContentFromHtml(html) {
+            var index = html.indexOf(">", index + 1);
+            var content = "";
+            while (index >= 0) {
+                content += (readContent(html, index));
+                index = html.indexOf(">", index + 1);
+            }
+            
+            return content;
+        }
+
+        function readContent(text, index) {
+            var index = index+1;
+            content = "";
+            while (text[index] !== "<" && index < text.length) {
+                content += text[index];
+                index++;
+            }
+            return content;
+        }
+    </script>
+</body>
+</html>

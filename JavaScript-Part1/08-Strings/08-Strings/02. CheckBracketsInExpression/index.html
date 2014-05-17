@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Check if the brackets in the given expression</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <input type="text" id="expression" />
+    <button onclick="checkIfBracketsAreCorrect()">Check brackets</button>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        function checkIfBracketsAreCorrect() {
+            var expression = jsConsole.read("#expression"),
+                bracketCounter = 0;
+            for (var i = 0; i < expression.length; i++) {
+                if (expression[i] === "(") {
+                    bracketCounter += 1;
+                }
+
+                if (expression[i] === ")") {
+                    if (bracketCounter < 1) {
+                        bracketCounter -= 1;
+                        break;
+                    }
+                    bracketCounter -= 1;
+                }
+            }
+
+            jsConsole.writeLine("Brackets are" + (bracketCounter === 0 ? "" : " NOT") + " correct");
+        }
+    </script>
+</body>
+</html>

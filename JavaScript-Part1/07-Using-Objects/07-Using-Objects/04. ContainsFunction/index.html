@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Write a functions that checks if a given object contains given property</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        function hasProperty(obj, property) {
+            for (var prop in obj) {
+                if (prop == property) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        jsConsole.writeLine("document has write property? = " + hasProperty(document, "write"));
+    </script>
+</body>
+</html>

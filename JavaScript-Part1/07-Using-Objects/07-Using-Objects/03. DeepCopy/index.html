@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Write a function that makes a deep copy</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        var testObject = {
+            value1: "String",
+            value2: 5,
+            objValue: {
+                prop1: "fsafas",
+                prop2: 434
+            }
+        }
+
+        var deepCopyObject = deepCopy(testObject);
+        jsConsole.writeLine("deepCopyObject === testObject -> " + (deepCopyObject === testObject));
+        jsConsole.writeLine("deepCopyObject == testObject -> " + (deepCopyObject == testObject));
+
+        function deepCopy(obj) {
+            if (obj === null) {
+                return -1;
+            }
+
+            var clonedObj = {};
+            for (var property in obj) {
+                if (typeof (obj[property]) === "object") {
+                    clonedObj[property] = deepCopy(obj[property]);
+                } else {
+                    clonedObj[property] = obj[property];
+                }
+            }
+
+            return clonedObj;
+        }
+    </script>
+</body>
+</html>

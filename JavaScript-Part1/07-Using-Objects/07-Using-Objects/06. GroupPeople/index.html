@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Group an array of people and return an associative array</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        var people = [
+            { firstname: "Anton", lastname: "Miladinov", age: 19 },
+            { firstname: "Ivan", lastname: "Angelov", age: 34 },
+            { firstname: "Renata", lastname: "Petrova", age: 18 },
+            { firstname: "Hristo", lastname: "Petkov", age: 23 },
+            { firstname: "Iordan", lastname: "Goranov", age: 57 },
+            { firstname: "Iordan", lastname: "Panaiotov", age: 37 },
+            { firstname: "Atanas", lastname: "Ivanov", age: 23 }
+        ];
+
+        function group(people, criteria) {
+            if (criteria != "age" && criteria != "firstname" && criteria != "lastname") {
+                return -1;
+            }
+
+            var grouped = {};
+            for (var i = 0; i < people.length; i++) {
+                if (!grouped[people[i][criteria]]) {
+                    grouped[people[i][criteria]] = [];
+                }
+
+                grouped[people[i][criteria]].push(people[i]);
+            }
+
+            return grouped;
+        }
+
+        console.log(group(people, "firstname"));
+    </script>
+</body>
+</html>
