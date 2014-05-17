@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Create a function that formats a string using placeholders</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        var text = stringFormat("Hello, {0}! My name is {1} and i'm {2} years old.", "Peter", "Thomas", 17);
+        jsConsole.writeLine(text);
+
+        function stringFormat(string) {
+            var args = [];
+            for (var arg in arguments) {
+                args.push(arguments[arg]);
+            }
+
+            args.shift();
+            for (var i = 0; i < args.length; i++) {
+                string = string.replace("{" + i + "}", args[i]);
+            }
+
+            return string;
+        }
+    </script>
+</body>
+</html>

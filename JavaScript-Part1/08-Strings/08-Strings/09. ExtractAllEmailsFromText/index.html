@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Make function to extract all emails from text and return then as array of strings</title>
+    <link href="../styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="../scripts/js-console.js"></script>
+    <script>
+        var text = 'fsafsa fsa fs, fsa @ fsafas, fsafas@fsafsa.com fsafsjopfsa fjsap-fsafsa jiofs fsa_jfio@fsa.df';
+        var emails = text.match(/[a-zA-Z\._]+@[a-zA-Z\._0-9]+\.[a-zA-Z]{2,4}/g);
+        jsConsole.writeLine(emails);
+    </script>
+</body>
+</html>

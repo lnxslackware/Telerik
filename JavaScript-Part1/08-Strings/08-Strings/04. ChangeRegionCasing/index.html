@@ -9,41 +9,61 @@
     <script src="../scripts/js-console.js"></script>
     <script>
         var text = 'We are <mixcase>living</mixcase> in a <upcase>yellow submarine</upcase>. We <mixcase>don\'t</mixcase> have <lowcase>anything</lowcase> else.';
-        var elementsToBeReplaced = [];
-        var foundIndex = 0;
-        var casing = "";
-        var closingCasing = "";
-        while (foundIndex > -1) {
-            foundIndex = text.indexOf("<", 0);
+        var result = changeRegionText(text);
 
-            //add the index of the opening tag at position 0 of the array
-            elementsToBeReplaced.push([foundIndex])
-            
+        jsConsole.writeLine(result);
 
-            casing = readCasing(text, foundIndex + 1);
-            //add the casing to the array at position 2
-            elementsToBeReplaced[elementsToBeReplaced.length - 1][2] = casing;
-            foundIndex++;
-
-            //check if the next closing tag is for the previous
-            //must go to while loop
-            foundIndex = text.indexOf("</", foundIndex);
-            closingCasing = readCasing(text, foundIndex + 2);
-
-            //if (closingCasing === elementsToBeReplaced[elementsToBeReplaced.length - 1][2]) {
-            //    elementsToBeReplaced[elementsToBeReplaced.length - 1][1] = foundIndex + 2 +
-            //        closingCasing.length + 1;
-            //}
+        function Region(name, transform) {
+            this.open = "<" + name + ">";
+            this.close = "</" + name + ">";
+            this.transform = transform;
         }
 
-        function readCasing(text, index) {
-            var casing = "";
-            while (text[index] !== ">") {
-                casing += text[index];
-                index++;
+        function changeRegionText(text) {
+            var upcase = new Region("upcase", function (string) { return string.toUpperCase(); });
+            var lowcase = new Region("lowcase", function (string) { return string.toLowerCase(); });
+            var mixcase = new Region("mixcase", function (string) {
+                var mixedString = "";
+                for (var i = 0; i < string.length; i++) {
+                    if (Math.random() < .5) {
+                        mixedString = string[i].toUpperCase();
+                    }
+                    else {
+                        mixedString = string[i].toLowerCase();
+                    }
+                }
+
+                return mixedString;
+            });
+
+            var regions = [upcase, lowcase, mixcase];
+            var applyRegionCasing = [];
+            var newText = "";
+
+            for (var i = 0; i < text.length; i++) {
+
+                if (text[i] === '<') {
+                    for (var j = 0; j < regions.length; j++) {
+                        if (text.substr(i, regions[j].open.length) === regions[j].open) {
+                            applyRegionCasing.push(regions[j]);
+                            i += regions[j].open.length;
+                        }
+                        else if (text.substr(i, regions[j].close.length) === regions[j].close) {
+                            applyRegionCasing.pop(regions[j]);
+                            i += regions[j].close.length;
+                        }
+                    }
+                }
+
+                var nextChar = text[i];
+                for (var k = applyRegionCasing.length - 1; k >= 0; k--) {
+                    nextChar = applyRegionCasing[k].transform(nextChar);
+                }
+
+                newText += nextChar;
             }
 
-            return casing;
+            return newText;
         }
     </script>
 </body>
