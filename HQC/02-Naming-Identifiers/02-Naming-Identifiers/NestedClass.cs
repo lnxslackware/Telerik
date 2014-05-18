@@ -4,18 +4,18 @@ class ContainingClass
 {
     const int MaxCount = 6;
 
-    class NestedClass
+    class InputData
     {
-        public void ConvertBoolToString(bool promenliva)
+        public void PrintBoolData(bool inputData)
         {
-            string promenlivaKatoString = promenliva.ToString();
-            Console.WriteLine(promenlivaKatoString);
+            string boolAsString = inputData.ToString();
+            Console.WriteLine(boolAsString);
         }
     }
 
     public static void Main()
     {
-        NestedClass instanceOfNestedClass = new NestedClass();
-        instanceOfNestedClass.ConvertBoolToString(true);
+        NestedClass dataManager = new NestedClass();
+        dataManager.ConvertBoolToString(true);
     }
 }

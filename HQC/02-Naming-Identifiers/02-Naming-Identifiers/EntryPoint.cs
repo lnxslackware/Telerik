@@ -13,11 +13,11 @@
         public int Age { get; set; }
     }
 
-    public void Make_Чуек(int magicNumber)
+    public void CreateHuman(int age)
     {
         Human human = new Human();
-        human.Age = magicNumber;
-        if (magicNumber % 2 == 0)
+        human.Age = age;
+        if (age % 2 == 0)
         {
             human.Name = "Батката";
             human.Sex = Sex.Male;
