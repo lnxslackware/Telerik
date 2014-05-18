@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1E3B74B8-383F-4A05-9C4E-B2303E34250C}</ProjectGuid>
+    <ProjectGuid>{5EBADC66-B27B-4B1C-9284-085594DF5ECE}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_08_Strings</RootNamespace>
-    <AssemblyName>08-Strings</AssemblyName>
+    <RootNamespace>_09_Exam_Preparation</RootNamespace>
+    <AssemblyName>09-Exam-Preparation</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -57,7 +57,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="styles\js-console.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -66,27 +65,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="01. ReverseString\index.html" />
-    <Content Include="02. CheckBracketsInExpression\index.html" />
-    <Content Include="03. CountSubstringRepeats\index.html" />
-    <Content Include="04. ChangeRegionCasing\index.html" />
-    <Content Include="05. ReplaceWhiteSpaces\index.html" />
-    <Content Include="06. GetTextFromHtmlCode\index.html" />
-    <Content Include="07. UrlParser\index.html" />
-    <Content Include="08. ReplaceAnchorTagsInHtml\index.html" />
-    <Content Include="09. ExtractAllEmailsFromText\index.html" />
-    <Content Include="10. ExtractAllPalindromesFromText\index.html" />
-    <Content Include="11. StringFormatFunction\index.html" />
-    <Content Include="12. GenerateAListByTemplate\index.html" />
-    <Content Include="scripts\js-console.js" />
-    <Content Include="styles\js-console.css" />
-    <Content Include="styles\js-console.min.css" />
+    <Content Include="01. Sequences\sequences.js" />
+    <Content Include="02.JoroTheNaughty\solution.js" />
+    <Content Include="index.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -100,9 +86,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>17192</DevelopmentServerPort>
+          <DevelopmentServerPort>59779</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:17192/</IISUrl>
+          <IISUrl>http://localhost:59779/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
