@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Select all divs nodes that are directly inside other div elements</title>
+    <script src="../scripts/select-all-nested-divs.js"></script>
+</head>
+<body>
+    <div>
+        parent div
+        <div>
+            child div
+            <div>
+                div in the child div
+            </div>
+        </div>
+        <div>
+            another child div
+        </div>
+    </div>
+    <div>
+        another div
+    </div>
+    <button onclick="getAllNestedDivsWithQuerySelector()">Select with querySelector</button>
+    <button onclick="getAllNestedDivsWithGetElement()">Select with getElementByTagName</button>
+    <script>
+        //var nestedDivs = getAllNestedDivsWithQuerySelector();
+        //var nestedDivs2 = getAllNestedDivsWithGetElement();
+        //console.log(nestedDivs);
+        //console.log(nestedDivs2);
+        //console.log();
+    </script>
+</body>
+</html>
