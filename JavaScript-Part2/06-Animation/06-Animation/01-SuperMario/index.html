@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Super Mario</title>
+    <script src="../scripts/raphael-min.js"></script>
+    <style>
+        svg {
+            border: 1px solid black;
+        }
+
+        canvas{
+            position: absolute;
+            left: 250px;
+            top: 426px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <canvas id="mario-canvas" width="72" height="81">
+        </canvas>
+    </div>
+    <script>
+        var paper = Raphael('wrapper', 800, 500),
+            backgroundImagesGenerationTime = 7000,
+            objectsPattern = {
+                'small cloud': 120,
+                'small cloud 2': 220,
+                'small bush': 20,
+                'big bush': 500,
+                'green tree': 100,
+                'small hill': 360
+            },
+            generatedBackgroundObjects = {
+                'small cloud': {
+                    name: 'small cloud',
+                    path: '../imgs/small-cloud.png',
+                    x: paper.width + objectsPattern['small cloud'],
+                    y: 10,
+                    width: 80,
+                    height: 60
+                },
+                'small bush': {
+                    name: 'small bush',
+                    path: '../imgs/small-bush.png',
+                    x: paper.width + objectsPattern['small bush'],
+                    y: paper.height - 60,
+                    width: 80,
+                    height: 60
+                },
+                'big bush': {
+                    name: 'big bush',
+                    path: '../imgs/big-bush.png',
+                    x: paper.width + objectsPattern['big bush'],
+                    y: paper.height - 40,
+                    width: 160,
+                    height: 40
+                },
+                'small cloud 2': {
+                    name: 'small cloud',
+                    path: '../imgs/small-cloud.png',
+                    x: paper.width + objectsPattern['small cloud 2'],
+                    y: 10,
+                    width: 80,
+                    height: 60
+                },
+                'green tree': {
+                    name: 'green tree',
+                    path: '../imgs/green-tree.png',
+                    x: paper.width + objectsPattern['green tree'],
+                    y: paper.height - 115,
+                    width: 40,
+                    height: 115
+                },
+                'small hill': {
+                    name: 'small hll',
+                    path: '../imgs/small-hill.png',
+                    x: paper.width + objectsPattern['small hill'],
+                    y: paper.height - 50,
+                    width: 120,
+                    height: 50
+                }
+            },
+            terrainSpeed = 3,
+            canvas = document.getElementById('mario-canvas'),
+                ctx = canvas.getContext('2d'),
+            marioStepTimeout = 300;
+
+        function manageBackgroundObjects() {
+            for (obj in generatedBackgroundObjects) {
+                if (generatedBackgroundObjects[obj].x + generatedBackgroundObjects[obj].width <= 0) {
+                    generatedBackgroundObjects[obj].x = paper.width + objectsPattern[obj];
+                }
+            }
+        }
+
+        function drawMario(ctx, step) {
+            var marioImage = '../imgs/mario-standing.png';
+
+            if (step) {
+                marioImage = '../imgs/mario-walking.png';
+            }
+
+            var imageObj = new Image();
+            imageObj.src = marioImage;
+
+            imageObj.onload = function () {
+                ctx.clearRect(0, 0, canvas.width * 2, canvas.height * 2);
+                ctx.drawImage(imageObj, 0, 0);
+            };
+
+            setTimeout(function () {
+                step = !step;
+                drawMario(ctx, step);
+            }, marioStepTimeout);
+        }
+
+        ctx.scale(0.5, 0.5);
+        drawMario(ctx, false);
+
+        function animateBackground() {
+            paper.clear();
+
+            manageBackgroundObjects();
+
+            for (obj in generatedBackgroundObjects)
+            {
+                paper.image(generatedBackgroundObjects[obj].path, generatedBackgroundObjects[obj].x,
+                    generatedBackgroundObjects[obj].y, generatedBackgroundObjects[obj].width,
+                    generatedBackgroundObjects[obj].height);
+
+                generatedBackgroundObjects[obj].x -= terrainSpeed;
+            }
+
+
+            requestAnimationFrame(animateBackground);
+        }
+
+        animateBackground();
+    </script>
+</body>
+</html>
