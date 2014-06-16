@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Telerik</title>
+    <script src="../scripts/raphael-min.js"></script>
+</head>
+<body>
+    <script>
+        var paper = Raphael(0, 0, 400, 300);
+        paper.rect(20, 20, 370, 140)
+        .attr({
+            rx: 10,
+            stroke: 'green'
+        });
+
+        paper.text(210, 70, 'Telerik')
+        .attr({
+            fill: 'black',
+            'font-size': '70',
+            'font-weight': 'bold',
+            'font-family': 'Calibri, Consolas, Arial'
+        });
+
+        paper.text(315, 70, '®')
+        .attr({
+            fill: 'black',
+            'font-size': '30',
+            'font-family': 'Calibri, Consolas, Arial'
+        });
+
+        paper.text(315, 70, '®')
+        .attr({
+            fill: 'black',
+            'font-size': '30',
+            'font-family': 'Calibri, Consolas, Arial'
+        });
+
+        paper.text(248, 110, 'Develop experiences')
+        .attr({
+            fill: 'black',
+            'font-size': '30',
+            'font-family': 'Calibri, Consolas, Arial'
+        });
+
+        paper.path('M 35 60 l 10 -10 l 30 30 l -15 15 l -15 -15 l 30 -30 l 10 10')
+        .attr({
+            stroke : 'green',
+            'stroke-width' : 10
+        });
+    </script>
+</body>
+</html>

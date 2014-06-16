@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Spiral</title>
+    <script src="../scripts/raphael-min.js"></script>
+</head>
+<body>
+    <script>
+
+        var paper = Raphael(0, 0, 400, 300),
+            angle = 0,
+            spiralWidth = 6,
+            center = {
+                x: paper.width / 2,
+                y: paper.height / 2
+            },
+            currentPoint = {
+                x: center.x,
+                y: center.y
+            };
+        
+        while (true) {
+            if (0 > currentPoint.x || currentPoint.x > paper.width) {
+                break;
+            }
+
+            if (0 > currentPoint.y || currentPoint.y > paper.height) {
+                break;
+            }
+
+            paper.circle(currentPoint.x, currentPoint.y, 1);
+
+            angle += 0.01;
+            currentPoint.x = center.x + (spiralWidth * angle) * Math.cos(angle);
+            currentPoint.y = center.y + (spiralWidth * angle) * Math.sin(angle);
+        }
+    </script>
+</body>
+</html>
