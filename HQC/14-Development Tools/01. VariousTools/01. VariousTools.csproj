@@ -59,7 +59,7 @@
     <Content Include="Testimonials\CodeObfuscatedWithEazfuscator.NET_JD.png" />
     <Content Include="Testimonials\Eazfuscator.NET_Assistant.png" />
     <Content Include="Testimonials\ExportFromGoogleCode_SVN.png" />
-    <Content Include="Testimonials\GoogleCodeProject.txt" />
+    <Content Include="Testimonials\GitHubProjectUpload.txt" />
     <Content Include="Testimonials\ILSpy.png" />
     <Content Include="Testimonials\ImportInGoogleCode_SVN.png" />
     <Content Include="Testimonials\JustDecompile.png" />
