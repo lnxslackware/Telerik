@@ -1,0 +1,43 @@
+=======
+Eclipse
+=======
+Eclipse is an integrated development environment (IDE). 
+It contains a base workspace and an extensible plug-in system for customizing the environment.
+Written mostly in Java, Eclipse can be used to develop applications. 
+By means of various plug-ins, Eclipse may also be used to develop applications in other programming
+languages.
+
+==================
+JetBrains WebStorm
+==================
+JetBrains WebStorm is a commercial IDE for JavaScript, CSS & HTML built on JetBrains' IntelliJ IDEA platform. 
+WebStorm is a specialized version of PhpStorm, offering a subset of its features. 
+WebStorm ships with pre-installed JavaScript plugins (such as for Node.js), which are available 
+for PhpStorm as well at no cost.
+
+
+========
+NetBeans
+========
+NetBeans is an integrated development environment (IDE) for developing primarily with Java, 
+but also with other languages, in particular PHP, C/C++, and HTML5. 
+It is also an application platform framework for Java desktop applications and others.
+The NetBeans IDE is written in Java and can run on Windows, OS X, Linux, Solaris 
+and other platforms supporting a compatible JVM.
+
+====
+Mono
+====
+Mono is a free and open source project led by Xamarin (formerly by Novell and originally by Ximian) 
+to create an Ecma standard-compliant, .NET Framework-compatible set of tools including, among others, 
+a C# compiler and a Common Language Runtime.
+
+=============
+Aptana Studio
+=============
+Aptana Studio is an open source integrated development environment (IDE) for building web applications. 
+Based on Eclipse, it supports JavaScript, HTML, DOM and CSS with code-completion, outlining, 
+JavaScript debugging, error and warning notifications and integrated documentation. 
+Additional plugins allow Aptana Studio to support Ruby on Rails, PHP, Python, Perl, Adobe AIR, 
+Apple iPhone and Nokia WRT (Web Runtime). Aptana Studio is available as a standalone on Windows, 
+Mac OS X and Linux, or as a plugin for Eclipse.
